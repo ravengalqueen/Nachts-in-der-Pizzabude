@@ -1,11 +1,15 @@
 extends Node
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+var night = 1
+var door_left_open = false
+var door_right_open = true
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+# animatronic positions
+
+#petar: 1: Stage, 2: Backstage, 3: Main area, 4: Hallway, 5: office windows, 6: office doors, 7: jumpscares
+var petar_position = 1
 func _process(delta: float) -> void:
-	pass
+	if petar_position == 7: 
+		print("rahhh i am a jumpscare")
