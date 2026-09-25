@@ -11,6 +11,8 @@ config_version=5
 [application]
 
 config/name="Nachts-in-der-Pizzabude"
+
+run/main_scene="uid://t5jf4q36537w"
 run/main_scene="uid://b7cxbjah5pmql"
 run/main_scene="res://node_2d.tscn"
 
