@@ -22,4 +22,3 @@ func discharge(amount):
 func recharge(amount):
 	amount = clamp(amount, 0.1, 100.0)
 	energy = clamp((energy+amount), 0.0, 100.0)
-
