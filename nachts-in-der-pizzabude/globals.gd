@@ -1,5 +1,5 @@
 extends Node
-var energy = 100.0
+var energy = 50.0
 
 var night = 1
 var door_left_open = false
@@ -22,4 +22,3 @@ func discharge(amount):
 func recharge(amount):
 	amount = clamp(amount, 0.1, 100.0)
 	energy = clamp((energy+amount), 0.0, 100.0)
-

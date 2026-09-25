@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cd4yfy6kqsvdj" path="res://icon.svg" id="1_1qlp0"]
 [ext_resource type="Script" uid="uid://cm3m7b4f4mj6f" path="res://minigames/knob.gd" id="1_qaulb"]
 
-[node name="recharge_lever" type="Node2D" unique_id=761692067]
+[node name="recharge_crank" type="Node2D" unique_id=761692067]
 position = Vector2(16, 12)
 
 [node name="base" type="Sprite2D" parent="." unique_id=32295677]
