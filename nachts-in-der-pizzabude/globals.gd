@@ -1,5 +1,5 @@
 extends Node
-
+var energy = 100.0
 
 var night = 1
 var door_left_open = false
@@ -13,3 +13,13 @@ var petar_position = 1
 func _process(delta: float) -> void:
 	if petar_position == 7: 
 		print("rahhh i am a jumpscare")
+	pass
+
+func discharge(amount):
+	amount = clamp(amount, 0.1, 100.0)
+	energy = clamp((energy-amount), 0.0, 100.0)
+
+func recharge(amount):
+	amount = clamp(amount, 0.1, 100.0)
+	energy = clamp((energy+amount), 0.0, 100.0)
+
