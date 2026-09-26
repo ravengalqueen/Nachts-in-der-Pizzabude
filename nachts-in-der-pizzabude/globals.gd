@@ -9,7 +9,7 @@ var door_right_open = true
 
 # camera positions
 #1: stage, 2: main area, 3: storage room, 4: play area, 5: kitchen, 6: hallway 1, 7: hallway 2
-var camera_position = 1
+var camera_position = 2
 
 
 # animatronic jumpscares
@@ -19,6 +19,8 @@ func _process(delta: float) -> void:
 		print("rahhh i am a jumpscare")
 	if codi_jumpscare == true:
 		print("rahhh i am a jumpscare")
+	if thritynine_jumpscare == true:
+		print("rahhhhhhh i am a jumpscare")
 
 # animatronic positions
 
@@ -51,10 +53,11 @@ func _ready() -> void:
 	_Nighttimer()
 
 	
+
 	
 func _Nighttimer():
 	while true:
-		get_tree().create_timer(90.0).timeout
+		await get_tree().create_timer(90.0).timeout
 		hours+=1 
 		if hours == 6:
 			get_tree().change_scene_to_file("res://YOUWON.tscn")
