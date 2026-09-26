@@ -1,6 +1,7 @@
 extends Node
 var energy = 100.0
 
+var win = false
 var nightunl = 1
 var hours = 0
 var night = 1
@@ -58,6 +59,7 @@ var highdrough_called = false
 func discharge(amount):
 	amount = clamp(amount, 0.0, 100.0)
 	energy = clamp((energy-amount), 0.0, 100.0)
+	
 
 func recharge(amount):
 	amount = clamp(amount, 0.0, 100.0)

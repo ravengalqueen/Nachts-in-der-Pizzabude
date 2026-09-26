@@ -13,12 +13,16 @@ offset_left = 480.0
 offset_top = 401.0
 offset_right = 695.0
 offset_bottom = 458.0
+theme_override_font_sizes/font_size = 30
+text = "Next Night"
 
 [node name="mainmenu" type="Button" parent="." unique_id=1537843958]
 offset_left = 480.0
 offset_top = 501.0
 offset_right = 695.0
 offset_bottom = 558.0
+theme_override_font_sizes/font_size = 30
+text = "Main Menu"
 
 [node name="YOUWON" type="Label" parent="." unique_id=1082477370]
 visible = false

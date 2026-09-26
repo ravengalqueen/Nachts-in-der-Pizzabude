@@ -52,6 +52,7 @@ func _Nighttimer():
 		await get_tree().create_timer(90.0).timeout
 		globals.hours += 1 
 		if globals.hours == 6:
+			globals.win = true
 			get_tree().change_scene_to_file("res://YOUWON.tscn")
 			break
 			
@@ -81,3 +82,8 @@ func _testing_battery():
 	for i in range(30):
 		await get_tree().create_timer(2).timeout
 		print(globals.energy)
+		
+func _noenergy():
+	if globals.energy == 0:
+		get_tree().change_scene_to_file("res://YOUWON.tscn")
+		
