@@ -15,6 +15,9 @@ func _jumpscare():
 		print("codihoarhoarhoar")
 	elif globals.thritynine_jumpscare == true:
 		print("39rahhhhh")
-	
+	elif globals.blandt_jumpscare == true:
+		print("blandtaiaiaiaiaiaiaiaaaiaii")
+	elif globals.petar_jumpscare == true:
+		print("PETARPARKAR")
 	
 	

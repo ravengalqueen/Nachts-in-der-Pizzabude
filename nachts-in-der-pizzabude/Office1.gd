@@ -15,5 +15,20 @@ func _on_mouse_entered():
 	get_tree().change_scene_to_file("res://Stagecam.tscn")
 	print("harhar")
 	
+func _loser():
+	if globals.codi_jumpscare == true:
+		print("codihoarhoarhoar")
+		get_tree().change_scene_to_file("res://JUMPSCARE.tscn")
+	elif globals.thritynine_jumpscare == true:
+		print("39rahhhhh")
+		get_tree().change_scene_to_file("res://JUMPSCARE.tscn")
+	elif globals.blandt_jumpscare == true:
+		print("blandtaiaiaiaiaiaiaiaaaiaii")
+		get_tree().change_scene_to_file("res://JUMPSCARE.tscn")
+	elif globals.petar_jumpscare == true:
+		print("PETARPARKAR")
+		get_tree().change_scene_to_file("res://JUMPSCARE.tscn")
+		
+	
 
 	

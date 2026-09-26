@@ -26,5 +26,12 @@ offset_right = 150.0
 offset_bottom = 264.0
 text = "Start Game"
 
+[node name="Label2" type="Label" parent="." unique_id=183696419]
+offset_left = 63.0
+offset_top = 307.0
+offset_right = 152.0
+offset_bottom = 339.0
+text = "Nights"
+
 [connection signal="button_down" from="startgamebutt" to="Area2D" method="_on_startgamebutt_button_down"]
 [connection signal="button_down" from="Nightsbutt" to="Area2D" method="_on_nightsbutt_button_down"]

@@ -27,7 +27,7 @@ func _process(delta: float) -> void:
 
 #petar: 1: Stage, 2: Backstage, 3: Main area, 4: Hallway, 5: office windows, 6: office doors, 7: jumpscares
 var petar_position = 1
-var petar_jumpscare = false
+var petar_jumpscare = true
 
 # Codi positions like camera positions
 var codi_position = 1
