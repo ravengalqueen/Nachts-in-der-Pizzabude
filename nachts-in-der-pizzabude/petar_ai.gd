@@ -39,6 +39,7 @@ func _movement():
 					continue
 				else:
 					globals.petar_position += 1
+					break
 					
 					
 			else:

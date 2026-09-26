@@ -30,7 +30,7 @@ func _process(delta: float) -> void:
 		same_cam = false
 	
 func _movement():
-	while true: 
+	while globals.hours < 6: 
 		await get_tree().create_timer(12).timeout
 		if randi_range(1,20) <= level: 
 			globals.codi_position = randi_range(2,7)
