@@ -9,7 +9,7 @@ var door_right_open = true
 
 # camera positions
 #1: stage, 2: main area, 3: storage room, 4: play area, 5: kitchen, 6: hallway 1, 7: hallway 2
-var camera_position = 1
+var camera_position = 2
 
 
 # animatronic jumpscares
@@ -19,6 +19,8 @@ func _process(delta: float) -> void:
 		print("rahhh i am a jumpscare")
 	if codi_jumpscare == true:
 		print("rahhh i am a jumpscare")
+	if thritynine_jumpscare == true:
+		print("rahhhhhhh i am a jumpscare")
 
 # animatronic positions
 
@@ -35,6 +37,11 @@ var codi_jumpscare = false
 var thritynine_waiting = true
 var thritynine_jumpscare = false
 
+# blandt vars, 0 = not there, 1 = right part of the office, 2 = left part of the office
+# cuz bra is only at the office
+var blandt_pos = 0
+var blandt_jumpscare = false
+
 
 
 # energy system
@@ -49,8 +56,10 @@ func recharge(amount):
 
 func _ready() -> void:
 	_Nighttimer()
+
 	
-	
+
+
 func _Nighttimer():
 	while true:
 		await get_tree().create_timer(90.0).timeout
