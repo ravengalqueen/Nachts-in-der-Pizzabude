@@ -28,7 +28,6 @@ func _on_mouse_entered():
 		globals.percent += 0.005
 		doorleft.hide()
 		doorright.hide()
-	print("harhar")
 	
 
 func _loser():
@@ -84,4 +83,3 @@ func _testing_battery():
 	for i in range(30):
 		await get_tree().create_timer(2).timeout
 		print(globals.energy)
-
