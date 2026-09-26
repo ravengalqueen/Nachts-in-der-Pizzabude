@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dwfg5ugqvtlyk"]
 
+[ext_resource type="Script" uid="uid://c2m0ijygfh62i" path="res://cams.gd" id="1_15y2n"]
 [ext_resource type="Script" uid="uid://dff5yk4fuyy25" path="res://stage_ui.gd" id="1_ioxu0"]
 [ext_resource type="Texture2D" uid="uid://bg52vcg86nupe" path="res://ui_elements/graphics/image.jpg" id="2_15y2n"]
 [ext_resource type="Texture2D" uid="uid://cd4yfy6kqsvdj" path="res://icon.svg" id="3_7ppic"]
@@ -10,8 +11,10 @@
 size = Vector2(480, 38)
 
 [node name="Node2D" type="Node2D" unique_id=1866859984]
+script = ExtResource("1_15y2n")
 
 [node name="stage" type="Area2D" parent="." unique_id=2059387708]
+visible = false
 position = Vector2(540, 459)
 scale = Vector2(0.2777777, 0.3652321)
 script = ExtResource("1_ioxu0")
@@ -93,12 +96,6 @@ position = Vector2(469, 135)
 scale = Vector2(0.83251625, 0.2964326)
 texture = ExtResource("4_ptb6a")
 
-[node name="petar" type="Sprite2D" parent="play_area" unique_id=1847098229]
-visible = false
-position = Vector2(769, 471)
-scale = Vector2(1.890625, 1.625)
-texture = ExtResource("3_7ppic")
-
 [node name="kitchen" type="Area2D" parent="." unique_id=1791761359]
 visible = false
 position = Vector2(769, 471)
@@ -162,10 +159,70 @@ shape = SubResource("RectangleShape2D_0kbmt")
 
 [node name="cam_map" type="Area2D" parent="." unique_id=1990269328]
 
-[node name="cam_stage" type="Area2D" parent="cam_map" unique_id=779637255]
+[node name="cam_stage" type="Button" parent="cam_map" unique_id=1404059640]
+offset_left = 925.0
+offset_top = 436.0
+offset_right = 1053.0
+offset_bottom = 480.0
+text = "Cam 1
+"
 
-[node name="cam_main" type="Area2D" parent="cam_map" unique_id=1036956074]
+[node name="cam_main" type="Button" parent="cam_map" unique_id=205602896]
+offset_left = 924.0
+offset_top = 475.0
+offset_right = 1059.0
+offset_bottom = 560.0
+text = "Cam 2"
 
-[node name="cam_storage" type="Area2D" parent="cam_map" unique_id=518898994]
+[node name="cam_storage" type="Button" parent="cam_map" unique_id=1265330939]
+offset_left = 1060.0
+offset_top = 475.0
+offset_right = 1106.0
+offset_bottom = 514.0
+text = "cam 3"
+
+[node name="cam_play" type="Button" parent="cam_map" unique_id=1595379791]
+offset_left = 870.0
+offset_top = 478.0
+offset_right = 926.0
+offset_bottom = 563.0
+text = "Cam 4"
+
+[node name="cam_kitchen" type="Button" parent="cam_map" unique_id=636665288]
+offset_left = 1061.0
+offset_top = 514.0
+offset_right = 1115.0
+offset_bottom = 557.0
+text = "Cam 4"
+
+[node name="cam_hall1" type="Button" parent="cam_map" unique_id=1335124897]
+offset_left = 929.0
+offset_top = 563.0
+offset_right = 972.0
+offset_bottom = 649.0
+text = "Cam
+6"
+
+[node name="cam_hall2" type="Button" parent="cam_map" unique_id=1134284897]
+offset_left = 1018.0
+offset_top = 562.0
+offset_right = 1061.0
+offset_bottom = 652.0
+text = "Cam
+7"
+
+[node name="ColorRect" type="ColorRect" parent="cam_map" unique_id=876749539]
+offset_left = 972.0
+offset_top = 609.0
+offset_right = 1018.0
+offset_bottom = 651.0
+color = Color(0.19506672, 0.19506672, 0.19506669, 1)
 
 [connection signal="mouse_entered" from="Area2D" to="Area2D" method="_on_mouse_entered"]
+[connection signal="button_down" from="cam_map/cam_stage" to="." method="_on_cam_stage_button_down"]
+[connection signal="button_down" from="cam_map/cam_main" to="." method="_on_cam_main_button_down"]
+[connection signal="button_down" from="cam_map/cam_storage" to="." method="_on_cam_storage_button_down"]
+[connection signal="button_down" from="cam_map/cam_play" to="." method="_on_cam_play_button_down"]
+[connection signal="button_down" from="cam_map/cam_kitchen" to="." method="_on_cam_kitchen_button_down"]
+[connection signal="button_down" from="cam_map/cam_hall1" to="." method="_on_cam_hall_1_button_down"]
+[connection signal="button_down" from="cam_map/cam_hall2" to="." method="_on_cam_hall_2_button_down"]
