@@ -49,7 +49,6 @@ var highdrough_jumpscare = false
 var highdrough_called = false
 
 
-
 # energy system
 
 func discharge(amount):
