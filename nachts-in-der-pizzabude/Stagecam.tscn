@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://b8fsahk5deaap"]
 
 [ext_resource type="Script" uid="uid://c3pt7huqnp02j" path="res://Stagecam.gd" id="1_kwxqt"]
+[ext_resource type="Texture2D" uid="uid://bg52vcg86nupe" path="res://ui_elements/graphics/image.jpg" id="2_84h7x"]
+[ext_resource type="Texture2D" uid="uid://cd4yfy6kqsvdj" path="res://icon.svg" id="3_j3pqn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_og8jp"]
 size = Vector2(480, 38)
@@ -13,5 +15,20 @@ script = ExtResource("1_kwxqt")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1997099118]
 position = Vector2(602, 630)
 shape = SubResource("RectangleShape2D_og8jp")
+
+[node name="stage" type="Sprite2D" parent="." unique_id=1292940154]
+position = Vector2(576, 325.5)
+scale = Vector2(0.5615234, 0.42122394)
+texture = ExtResource("2_84h7x")
+
+[node name="petar" type="Sprite2D" parent="." unique_id=139906867]
+position = Vector2(230, 458)
+scale = Vector2(1.2343749, 2.3359375)
+texture = ExtResource("3_j3pqn")
+
+[node name="39" type="Sprite2D" parent="." unique_id=1461263953]
+position = Vector2(841, 413)
+scale = Vector2(0.96875, 1.828125)
+texture = ExtResource("3_j3pqn")
 
 [connection signal="mouse_entered" from="Area2D" to="Area2D" method="_on_mouse_entered"]

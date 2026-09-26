@@ -16,6 +16,7 @@ var camera_position = 2
 
 func _process(delta: float) -> void:
 	if petar_position == 7: 
+		petar_jumpscare = true
 		print("rahhh i am a jumpscare")
 	if codi_jumpscare == true:
 		print("rahhh i am a jumpscare")
@@ -26,7 +27,7 @@ func _process(delta: float) -> void:
 
 #petar: 1: Stage, 2: Backstage, 3: Main area, 4: Hallway, 5: office windows, 6: office doors, 7: jumpscares
 var petar_position = 1
-
+var petar_jumpscare = false
 
 # Codi positions like camera positions
 var codi_position = 1

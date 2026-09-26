@@ -1,6 +1,12 @@
 [gd_scene format=3 uid="uid://d4biueq245gel"]
 
 [ext_resource type="Script" uid="uid://bdsyqdyob4pca" path="res://39_ai.gd" id="1_wtcfe"]
+[ext_resource type="Texture2D" uid="uid://bg52vcg86nupe" path="res://ui_elements/graphics/image.jpg" id="2_0e48y"]
 
 [node name="Node2D" type="Node2D" unique_id=1933824520]
 script = ExtResource("1_wtcfe")
+
+[node name="Image" type="Sprite2D" parent="." unique_id=2084880573]
+position = Vector2(576.00006, 324)
+scale = Vector2(0.56152344, 0.42187497)
+texture = ExtResource("2_0e48y")
