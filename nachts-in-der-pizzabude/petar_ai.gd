@@ -28,7 +28,7 @@ func _movement():
 	while globals.hours < 6:
 		await get_tree().create_timer(10.7).timeout
 		if randi_range(1,20) <= level:
-			if globals.petar_position < 6:
+			if globals.petar_position < 6 and globals.camera_position != (globals.petar_position +1):
 				globals.petar_position += 1
 				print("petar" + str(globals.petar_position))
 				continue

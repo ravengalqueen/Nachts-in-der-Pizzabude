@@ -64,7 +64,7 @@ func discharge(amount):
 	energy = clamp((energy-amount), 0.0, 100.0)
 
 func recharge(amount):
-	amount = clamp(amount, 0.1, 100.0)
+	amount = clamp(amount, 0.0, 100.0)
 	energy = clamp((energy+amount), 0.0, 100.0)
 	
 func _loser():
