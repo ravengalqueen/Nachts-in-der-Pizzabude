@@ -10,17 +10,30 @@ var door_right_open = true
 #1: stage, 2: main area, 3: storage room, 4: play area, 5: kitchen, 6: hallway 1, 7: hallway 2
 var camera_position = 1
 
+
+# animatronic jumpscares
+
+func _process(delta: float) -> void:
+	if petar_position == 7: 
+		print("rahhh i am a jumpscare")
+	if codi_jumpscare == true:
+		print("rahhh i am a jumpscare")
+
 # animatronic positions
 
 #petar: 1: Stage, 2: Backstage, 3: Main area, 4: Hallway, 5: office windows, 6: office doors, 7: jumpscares
 var petar_position = 1
-func _process(delta: float) -> void:
-	if petar_position == 7: 
-		print("rahhh i am a jumpscare")
-	pass
+
 
 # Codi positions like camera positions
 var codi_position = 1
+var codi_jumpscare = false
+
+
+
+
+
+# energy system
 
 func discharge(amount):
 	amount = clamp(amount, 0.1, 100.0)
