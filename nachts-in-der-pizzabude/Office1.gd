@@ -28,7 +28,6 @@ func _on_mouse_entered():
 		globals.percent += 0.005
 		doorleft.hide()
 		doorright.hide()
-	print("harhar")
 	
 
 func _loser():
