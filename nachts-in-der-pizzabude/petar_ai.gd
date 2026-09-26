@@ -26,7 +26,7 @@ func _process(delta: float) -> void:
 		
 func _movement():
 	while true:
-		await get_tree().create_timer(2).timeout
+		await get_tree().create_timer(10.7).timeout
 		if randi_range(1,20) <= level:
 			if globals.petar_position < 6:
 				globals.petar_position += 1
