@@ -1,8 +1,20 @@
 [gd_scene format=3 uid="uid://bav0i3er2b6dh"]
 
 [ext_resource type="Script" uid="uid://cn4esj4j5hrmm" path="res://JUMPSCARE.gd" id="1_6hf43"]
+[ext_resource type="Texture2D" uid="uid://b3jsj34224w5x" path="res://ui_elements/graphics/codi_raw-removebg-preview.png" id="2_pmq77"]
+[ext_resource type="Texture2D" uid="uid://bysafawrsimb4" path="res://ui_elements/graphics/39 (2).png" id="3_v3xeu"]
 
 [node name="Node2D" type="Node2D" unique_id=182236669]
 
 [node name="Area2D" type="Area2D" parent="." unique_id=244282007]
 script = ExtResource("1_6hf43")
+
+[node name="codiscary" type="Sprite2D" parent="Area2D" unique_id=972674177]
+position = Vector2(575, 812)
+scale = Vector2(3.3966346, 2.7479167)
+texture = ExtResource("2_pmq77")
+
+[node name="39(2)" type="Sprite2D" parent="Area2D" unique_id=178198448]
+position = Vector2(549, 493)
+scale = Vector2(2.3662791, 1.7934783)
+texture = ExtResource("3_v3xeu")
