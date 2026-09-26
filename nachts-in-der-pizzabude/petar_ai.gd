@@ -5,7 +5,7 @@ var level: int
 func _ready() -> void:
 	match globals.night: 
 		1:
-			level = 3
+			level = 20
 		2:
 			level = 4
 		3: 
@@ -26,7 +26,7 @@ func _process(delta: float) -> void:
 		
 func _movement():
 	while globals.hours < 6:
-		await get_tree().create_timer(10.7).timeout
+		await get_tree().create_timer(3).timeout
 		if randi_range(1,20) <= level:
 			if globals.petar_position < 6 and globals.camera_position != (globals.petar_position +1):
 				globals.petar_position += 1
