@@ -26,6 +26,7 @@ func _on_mouse_entered():
 		doorright.hide()
 	print("harhar")
 	
+
 func _loser():
 	if globals.codi_jumpscare == true:
 		print("codihoarhoarhoar")
@@ -40,7 +41,6 @@ func _loser():
 		print("PETARPARKAR")
 		get_tree().change_scene_to_file("res://JUMPSCARE.tscn")
 		
-
 
 
 		
