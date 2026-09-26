@@ -14,4 +14,18 @@ script = ExtResource("1_v8yy1")
 position = Vector2(570, 629)
 shape = SubResource("RectangleShape2D_4qxub")
 
+[node name="doorleft" type="Button" parent="." unique_id=1611602882]
+offset_left = 53.0
+offset_top = 350.0
+offset_right = 150.0
+offset_bottom = 422.0
+
+[node name="doorright" type="Button" parent="." unique_id=1063307401]
+offset_left = 977.0
+offset_top = 304.0
+offset_right = 1108.0
+offset_bottom = 422.0
+
 [connection signal="mouse_entered" from="Area2D" to="Area2D" method="_on_mouse_entered"]
+[connection signal="pressed" from="doorleft" to="Area2D" method="_on_doorleft_pressed"]
+[connection signal="pressed" from="doorright" to="Area2D" method="_on_doorright_pressed"]

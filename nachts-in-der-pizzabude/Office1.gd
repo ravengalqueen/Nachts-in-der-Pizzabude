@@ -30,7 +30,11 @@ func _loser():
 		get_tree().change_scene_to_file("res://JUMPSCARE.tscn")
 		
 func _Nighttimer():
+<<<<<<< HEAD
 	while globals.hours < 6:
+=======
+	while true:
+>>>>>>> bef049f969e7f8e5cb6fd85e3da89ce24da58bd9
 		await get_tree().create_timer(90.0).timeout
 		globals.hours += 1 
 		globals.discharge(8.5)
@@ -39,6 +43,21 @@ func _Nighttimer():
 			break
 			
 		
-	
 
-	
+
+func _on_doorleft_pressed() -> void:
+	if globals.door_left_open == true:
+		globals.door_left_open = false
+		print("closed")
+	elif globals.door_left_open == false:
+		globals.door_left_open = true
+		print("open up buttercup")
+
+
+func _on_doorright_pressed() -> void:
+	if globals.door_left_open == true:
+		globals.door_left_open = false
+		print("closed")
+	elif globals.door_left_open == false:
+		globals.door_left_open = true
+		print("open up buttercup")

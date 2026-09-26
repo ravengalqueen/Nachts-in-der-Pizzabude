@@ -4,7 +4,7 @@ var energy = 100.0
 var nightunl = 1
 var hours = 0
 var night = 1
-var door_left_open = false
+var door_left_open = true
 var door_right_open = true
 
 # camera positions
