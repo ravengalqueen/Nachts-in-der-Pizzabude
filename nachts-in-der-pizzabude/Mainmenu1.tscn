@@ -7,7 +7,7 @@
 [node name="Area2D" type="Area2D" parent="." unique_id=2033992952]
 script = ExtResource("1_dm1nb")
 
-[node name="StartGamebutt" type="Button" parent="." unique_id=907306705]
+[node name="startgamebutt" type="Button" parent="." unique_id=907306705]
 offset_left = 38.0
 offset_top = 216.0
 offset_right = 148.0
@@ -18,3 +18,20 @@ offset_left = 36.0
 offset_top = 297.0
 offset_right = 158.0
 offset_bottom = 343.0
+
+[node name="Label" type="Label" parent="." unique_id=377917813]
+offset_left = 51.0
+offset_top = 221.0
+offset_right = 150.0
+offset_bottom = 264.0
+text = "Start Game"
+
+[node name="Label2" type="Label" parent="." unique_id=183696419]
+offset_left = 63.0
+offset_top = 307.0
+offset_right = 152.0
+offset_bottom = 339.0
+text = "Nights"
+
+[connection signal="button_down" from="startgamebutt" to="Area2D" method="_on_startgamebutt_button_down"]
+[connection signal="button_down" from="Nightsbutt" to="Area2D" method="_on_nightsbutt_button_down"]

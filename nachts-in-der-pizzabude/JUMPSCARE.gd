@@ -9,26 +9,15 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
-
-func _on_mouse_entered():
-	await get_tree().create_timer(0.4).timeout
-	get_tree().change_scene_to_file("res://Stagecam.tscn")
-	print("harhar")
 	
-func _loser():
+func _jumpscare():
 	if globals.codi_jumpscare == true:
 		print("codihoarhoarhoar")
-		get_tree().change_scene_to_file("res://JUMPSCARE.tscn")
 	elif globals.thritynine_jumpscare == true:
 		print("39rahhhhh")
-		get_tree().change_scene_to_file("res://JUMPSCARE.tscn")
 	elif globals.blandt_jumpscare == true:
 		print("blandtaiaiaiaiaiaiaiaaaiaii")
-		get_tree().change_scene_to_file("res://JUMPSCARE.tscn")
 	elif globals.petar_jumpscare == true:
 		print("PETARPARKAR")
-		get_tree().change_scene_to_file("res://JUMPSCARE.tscn")
-		
 	
-
 	

@@ -7,6 +7,61 @@
 [node name="Area2D" type="Area2D" parent="." unique_id=2030700310]
 script = ExtResource("1_pd2aj")
 
-[node name="Night1" type="Button" parent="." unique_id=1793774981]
-offset_right = 8.0
-offset_bottom = 8.0
+[node name="night1" type="Button" parent="." unique_id=1793774981]
+offset_left = 204.0
+offset_top = 90.0
+offset_right = 354.0
+offset_bottom = 170.0
+offset_transform_enabled = true
+
+[node name="night2" type="Button" parent="." unique_id=1912356538]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.27
+offset_left = 520.0
+offset_top = 90.0
+offset_right = 670.0
+offset_bottom = 170.0
+
+[node name="night3" type="Button" parent="." unique_id=1904326103]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.27
+offset_left = 847.0
+offset_top = 91.0
+offset_right = 997.0
+offset_bottom = 171.0
+
+[node name="night4" type="Button" parent="." unique_id=651332729]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.27
+offset_left = 205.0
+offset_top = 400.0
+offset_right = 355.0
+offset_bottom = 480.0
+
+[node name="night5" type="Button" parent="." unique_id=1397910140]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.27
+offset_left = 532.0
+offset_top = 401.0
+offset_right = 682.0
+offset_bottom = 481.0
+
+[node name="night6" type="Button" parent="." unique_id=159808203]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.27
+offset_left = 852.0
+offset_top = 397.0
+offset_right = 1002.0
+offset_bottom = 477.0
+
+[connection signal="button_down" from="night1" to="Area2D" method="_on_night_1_button_down"]
+[connection signal="button_down" from="night2" to="Area2D" method="_on_night_2_button_down"]
+[connection signal="button_down" from="night3" to="Area2D" method="_on_night_3_button_down"]
+[connection signal="button_down" from="night4" to="Area2D" method="_on_night_4_button_down"]
+[connection signal="button_down" from="night5" to="Area2D" method="_on_night_5_button_down"]
+[connection signal="button_down" from="night6" to="Area2D" method="_on_night_6_button_down"]
