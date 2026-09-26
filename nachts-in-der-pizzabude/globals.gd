@@ -49,6 +49,7 @@ func recharge(amount):
 
 func _ready() -> void:
 	_Nighttimer()
+
 	
 	
 func _Nighttimer():

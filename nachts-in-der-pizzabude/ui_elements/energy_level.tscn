@@ -1,3 +1,16 @@
 [gd_scene format=3 uid="uid://bdw4plf3lptl5"]
 
+[ext_resource type="Texture2D" uid="uid://cd4yfy6kqsvdj" path="res://icon.svg" id="1_06nuh"]
+[ext_resource type="Script" uid="uid://d1ig35tlxiold" path="res://ui_elements/texture_progress_bar.gd" id="2_ycenp"]
+
 [node name="EnergyLevel" type="Node2D" unique_id=1025423073]
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="." unique_id=1671591443]
+offset_left = 16.0
+offset_top = 28.0
+offset_right = 144.0
+offset_bottom = 156.0
+step = 12.5
+fill_mode = 3
+texture_progress = ExtResource("1_06nuh")
+script = ExtResource("2_ycenp")
