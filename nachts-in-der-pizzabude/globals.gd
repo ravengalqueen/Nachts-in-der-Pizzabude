@@ -7,10 +7,13 @@ var night = 1
 var door_left_open = true
 var door_right_open = true
 
+
 # camera positions
 #1: stage, 2: main area, 3: storage room, 4: play area, 5: kitchen, 6: hallway 1, 7: hallway 2
-var camera_position = 2
+var camera_position = 0
 
+func _ready() -> void:
+	Input.mouse_mode = Input.MOUSE_MODE_CONFINED
 
 # animatronic jumpscares
 
@@ -22,12 +25,13 @@ func _process(delta: float) -> void:
 		print("rahhh i am a jumpscare from codi")
 	if thritynine_jumpscare == true:
 		print("rahhhhhhh i am a jumpscare")
+	_loser()
 
 # animatronic positions
 
 #petar: 1: Stage, 2: Backstage, 3: Main area, 4: Hallway, 5: office windows, 6: office doors, 7: jumpscares
 var petar_position = 1
-var petar_jumpscare = true
+var petar_jumpscare = false
 
 # Codi positions like camera positions
 var codi_position = 1
@@ -37,6 +41,8 @@ var codi_jumpscare = false
 # cuz bro is only at the stage and at the office
 var thritynine_waiting = true
 var thritynine_jumpscare = false
+
+
 
 # blandt vars, 0 = not there, 1 = right part of the office, 2 = left part of the office
 # cuz bra is only at the office
@@ -58,3 +64,19 @@ func discharge(amount):
 func recharge(amount):
 	amount = clamp(amount, 0.1, 100.0)
 	energy = clamp((energy+amount), 0.0, 100.0)
+	
+func _loser():
+	if globals.codi_jumpscare == true:
+		print("codihoarhoarhoar")
+		get_tree().change_scene_to_file("res://JUMPSCARE.tscn")
+	elif globals.thritynine_jumpscare == true:
+		print("39rahhhhh")
+		get_tree().change_scene_to_file("res://JUMPSCARE.tscn")
+	elif globals.blandt_jumpscare == true:
+		print("blandtaiaiaiaiaiaiaiaaaiaii")
+		get_tree().change_scene_to_file("res://JUMPSCARE.tscn")
+	elif globals.petar_jumpscare == true:
+		print("PETARPARKAR")
+		get_tree().change_scene_to_file("res://JUMPSCARE.tscn")
+	else: 
+		pass
