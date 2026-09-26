@@ -3,7 +3,7 @@ extends Area2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	_Nighttimer()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -28,6 +28,15 @@ func _loser():
 	elif globals.petar_jumpscare == true:
 		print("PETARPARKAR")
 		get_tree().change_scene_to_file("res://JUMPSCARE.tscn")
+		
+func _Nighttimer():
+	while true:
+		await get_tree().create_timer(0.2).timeout
+		globals.hours += 1 
+		if globals.hours == 6:
+			get_tree().change_scene_to_file("res://YOUWON.tscn")
+			break
+			
 		
 	
 
