@@ -56,5 +56,6 @@ func _Nighttimer():
 		hours+=1 
 		if hours == 6:
 			get_tree().change_scene_to_file("res://Mainmenu1.tscn")
+			break
 			
 	
