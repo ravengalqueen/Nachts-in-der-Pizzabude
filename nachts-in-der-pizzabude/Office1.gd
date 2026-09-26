@@ -8,6 +8,7 @@ func _ready() -> void:
 	cams = $"../cams"
 	cams.hide()
 	_Nighttimer()
+	_testing_battery()
 	
 
 
@@ -15,13 +16,16 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	globals.discharge(globals.percent)
 
+
 func _on_mouse_entered():
 	if cams.visible:
 		cams.hide()
+		globals.percent -= 0.005
 		doorleft.show()
 		doorright.show()
 	else:
 		cams.show()
+		globals.percent += 0.005
 		doorleft.hide()
 		doorright.hide()
 	print("harhar")
@@ -58,16 +62,26 @@ func _Nighttimer():
 func _on_doorleft_pressed() -> void:
 	if globals.door_left_open == true:
 		globals.door_left_open = false
+		globals.percent += 0.005
 		print("closed")
 	elif globals.door_left_open == false:
+		globals.percent -= 0.005
 		globals.door_left_open = true
 		print("open up buttercup")
 
 
 func _on_doorright_pressed() -> void:
 	if globals.door_left_open == true:
+		globals.percent += 0.005
 		globals.door_left_open = false
 		print("closed")
 	elif globals.door_left_open == false:
+		globals.percent -= 0.005
 		globals.door_left_open = true
 		print("open up buttercup")
+
+
+func _testing_battery():
+	for i in range(30):
+		await get_tree().create_timer(2).timeout
+		print(globals.energy)
