@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://b7yxn4cogjrd"]
+
+[ext_resource type="Script" uid="uid://b507dlbst8s4w" path="res://animatronics/blandt_ai.gd" id="1_vooj8"]
+
+[node name="Blandt" type="Node2D" unique_id=1896544380]
+script = ExtResource("1_vooj8")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=991727115]
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=331574060]
+
+[connection signal="screen_entered" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

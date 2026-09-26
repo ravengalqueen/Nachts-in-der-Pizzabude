@@ -38,6 +38,11 @@ var codi_jumpscare = false
 var thritynine_waiting = true
 var thritynine_jumpscare = false
 
+# blandt vars, 0 = not there, 1 = right part of the office, 2 = left part of the office
+# cuz bra is only at the office
+var blandt_pos = 0
+var blandt_jumpscare = false
+
 
 
 # energy system
@@ -55,13 +60,13 @@ func _ready() -> void:
 
 	
 
-	
+
 func _Nighttimer():
 	while true:
 		await get_tree().create_timer(90.0).timeout
 		hours+=1 
 		if hours == 6:
-			get_tree().change_scene_to_file("res://YOUWON.tscn")
+			get_tree().change_scene_to_file("res://Mainmenu1.tscn")
 			break
 
 			
