@@ -31,13 +31,28 @@ func _loser():
 		
 func _Nighttimer():
 	while true:
-		await get_tree().create_timer(0.2).timeout
+		await get_tree().create_timer(90.0).timeout
 		globals.hours += 1 
 		if globals.hours == 6:
 			get_tree().change_scene_to_file("res://YOUWON.tscn")
 			break
 			
 		
-	
 
-	
+
+func _on_doorleft_pressed() -> void:
+	if globals.door_left_open == true:
+		globals.door_left_open = false
+		print("closed")
+	elif globals.door_left_open == false:
+		globals.door_left_open = true
+		print("open up buttercup")
+
+
+func _on_doorright_pressed() -> void:
+	if globals.door_left_open == true:
+		globals.door_left_open = false
+		print("closed")
+	elif globals.door_left_open == false:
+		globals.door_left_open = true
+		print("open up buttercup")
