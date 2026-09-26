@@ -92,6 +92,7 @@ scale = Vector2(1.453125, 1.6328125)
 texture = ExtResource("3_7ppic")
 
 [node name="storage_room" type="Area2D" parent="." unique_id=424177924]
+visible = false
 
 [node name="storage_room_image" type="Sprite2D" parent="storage_room" unique_id=68128961]
 position = Vector2(577, 325.49997)
@@ -116,9 +117,7 @@ position = Vector2(487.5, 291.24997)
 
 [node name="Button" parent="storage_room/recharge_crank/knob" index="0" unique_id=661262444]
 offset_left = -30.645935
-offset_top = -8.20668
 offset_right = -150.64594
-offset_bottom = -128.2067
 
 [node name="play_area" type="Area2D" parent="." unique_id=1166466235]
 visible = false
