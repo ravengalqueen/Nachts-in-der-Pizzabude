@@ -12,7 +12,7 @@ func _process(delta: float) -> void:
 
 func _on_mouse_entered():
 	await get_tree().create_timer(0.4).timeout
-	get_tree().change_scene_to_file("res://Stagecam.tscn")
+	get_tree().change_scene_to_file("res://cams.tscn")
 	print("harhar")
 	
 func _loser():

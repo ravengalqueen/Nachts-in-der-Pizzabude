@@ -37,6 +37,7 @@ func _movement():
 			countdown -= 1
 			print(countdown)
 			if countdown == 0:
+				
 				break
 		else: 
 			if countdown < 49:
@@ -49,10 +50,12 @@ func _movement():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if countdown == 0:
+		globals.thritynine_waiting = false
 		if globals.door_right_open: 
 			globals.thritynine_jumpscare = true
 		else: 
 			countdown = 50
+			globals.thritynine_waiting = true
 			if energy_stealer == true:
 				globals.discharge(17)
 			else: 
