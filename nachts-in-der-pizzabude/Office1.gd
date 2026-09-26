@@ -26,7 +26,7 @@ func _on_mouse_entered():
 		doorright.hide()
 	print("harhar")
 	
-<<<<<<< HEAD
+
 func _loser():
 	if globals.codi_jumpscare == true:
 		print("codihoarhoarhoar")
@@ -41,14 +41,10 @@ func _loser():
 		print("PETARPARKAR")
 		get_tree().change_scene_to_file("res://JUMPSCARE.tscn")
 		
-func _Nighttimer():
-	while globals.hours < 6:
-=======
 
 		
 func _Nighttimer():
 	while true:
->>>>>>> 64fad99b624b3ae3c60de6aae88df4e20b32d92f
 		await get_tree().create_timer(90.0).timeout
 		globals.hours += 1 
 		globals.discharge(8.5)
