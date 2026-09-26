@@ -39,8 +39,13 @@ var thritynine_jumpscare = false
 
 # blandt vars, 0 = not there, 1 = right part of the office, 2 = left part of the office
 # cuz bra is only at the office
-var blandt_pos = 0
+var blandt_position = 0
 var blandt_jumpscare = false
+
+# Highdrough;, 0 = play_area, 1 = main_area, 2 = Hallway, 3 = Office doors, 4 = jumpscare
+var highdrough_pos = 0
+var highdrough_jumpscare = false
+var highdrough_called = false
 
 
 
