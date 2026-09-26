@@ -17,21 +17,29 @@ func _ready() -> void:
 			level = 6
 		6:
 			level = 10
-			
+	_movement()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if globals.highdrough_called == true: 
+		following = true
+	else: 
+		following = false
 	
 func _movement():
-	if globals.night >= 3 && globals.hours >= 3:
-		while globals.hours < 6: 
-			await get_tree().create_timer(10).timeout
-			if !following:
-				if randi_range(1,20) <= level:
-					globals.highdrough_pos += 1
-			else:
-				if randi_range(1,20) >= level:
-					globals.highdrough_pos -= 1
-					
+	while globals.hours < 6:
+		if globals.night >= 3:
+			while globals.hours < 6: 
+				await get_tree().create_timer(10).timeout
+				if !following:
+					if randi_range(1,20) <= level:
+						globals.highdrough_pos += 1
+						print("highdrough;" + str(globals.highdrough_pos))
+						if globals.highdrough_pos >= 3:
+							break
+				else:
+					if randi_range(1,20) >= level and globals.highdrough_pos >= 0:
+						globals.highdrough_pos -= 1
+		else: 
+			return

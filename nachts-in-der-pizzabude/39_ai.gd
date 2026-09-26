@@ -7,7 +7,7 @@ var energy_stealer: bool
 func _ready() -> void:
 	match globals.night:
 		1: 
-			time = 0.3
+			time = 2
 			energy_stealer = true
 		2: 
 			time = 1.7
@@ -30,14 +30,11 @@ func _ready() -> void:
 		
 func _movement():
 	while globals.hours < 6: 
-		print("startet movement")
 		await get_tree().create_timer(time).timeout
-		print("got here")
 		if globals.camera_position != 1:
 			countdown -= 1
 			print(countdown)
 			if countdown == 0:
-				
 				break
 		else: 
 			if countdown < 49:

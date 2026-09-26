@@ -182,3 +182,13 @@ func _hide_cams():
 	kitchen.hide()
 	hallone.hide()
 	halltwo.hide()
+
+
+func _on_call_button_button_down() -> void:
+	globals.highdrough_called = true
+	print("highdrough; called")
+
+
+func _on_call_button_button_up() -> void:
+	globals.highdrough_called = false
+	print("highdrough; not called")

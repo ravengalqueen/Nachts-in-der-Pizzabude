@@ -33,6 +33,7 @@ func _Nighttimer():
 	while true:
 		await get_tree().create_timer(90.0).timeout
 		globals.hours += 1 
+		globals.discharge(8.5)
 		if globals.hours == 6:
 			get_tree().change_scene_to_file("res://YOUWON.tscn")
 			break

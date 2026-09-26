@@ -8,12 +8,12 @@ position = Vector2(85.99999, 97.99999)
 scale = Vector2(0.79999995, 0.8)
 
 [node name="base" type="Sprite2D" parent="." unique_id=32295677]
-position = Vector2(630.00006, 288.75)
-scale = Vector2(5.04, 5)
+position = Vector2(434.34506, 486.875)
+scale = Vector2(1.9828906, 1.9042969)
 texture = ExtResource("1_1qlp0")
 
 [node name="knob" type="Sprite2D" parent="." unique_id=277386202]
-position = Vector2(902, 265)
+position = Vector2(531.25, 412.5)
 scale = Vector2(0.7558596, 0.93554735)
 texture = ExtResource("1_1qlp0")
 script = ExtResource("1_qaulb")
@@ -24,10 +24,10 @@ anchor_left = -0.27737427
 anchor_top = -0.43692887
 anchor_right = 1.6110306
 anchor_bottom = 1.477606
-offset_left = -28.0
-offset_top = -5.0
-offset_right = -148.0
-offset_bottom = -125.0
+offset_left = -25.684662
+offset_top = -8.206696
+offset_right = -145.68466
+offset_bottom = -128.2067
 grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
