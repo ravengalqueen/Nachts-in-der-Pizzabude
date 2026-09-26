@@ -1,5 +1,6 @@
 extends Node2D
 
+@onready var hours = $Label
 @onready var cams = $cams
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -22,4 +23,3 @@ func _on_cams_visibility_changed() -> void:
 		globals.camera_position = 1
 	else:
 		globals.camera_position = 0
-		print("for the breakpoint")

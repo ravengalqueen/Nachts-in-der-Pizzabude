@@ -21,11 +21,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if petar_position == 7: 
 		petar_jumpscare = true
-		print("rahhh i am a jumpscare")
-	if codi_jumpscare == true:
-		print("rahhh i am a jumpscare from codi")
-	if thritynine_jumpscare == true:
-		print("rahhhhhhh i am a jumpscare")
+
 	_loser()
 
 # animatronic positions

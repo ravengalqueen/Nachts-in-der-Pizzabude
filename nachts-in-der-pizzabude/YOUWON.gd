@@ -36,7 +36,6 @@ func _on_mainmenu_button_down() -> void:
 	get_tree().change_scene_to_file("res://Mainmenu1.tscn")
 	if globals.nightunl == 1:
 		globals.nightunl = +1
-		print("worked")
 	elif globals.nightunl == 2:
 		globals.nightunl = +1
 	elif globals.nightunl == 3:

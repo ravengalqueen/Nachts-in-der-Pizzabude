@@ -59,6 +59,66 @@ offset_top = 397.0
 offset_right = 1002.0
 offset_bottom = 477.0
 
+[node name="Label" type="Label" parent="." unique_id=401136693]
+offset_left = 847.0
+offset_top = 91.0
+offset_right = 996.0
+offset_bottom = 169.0
+theme_override_font_sizes/font_size = 28
+text = "Night 3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label6" type="Label" parent="." unique_id=847062750]
+offset_left = 856.0
+offset_top = 398.0
+offset_right = 1005.0
+offset_bottom = 476.0
+theme_override_font_sizes/font_size = 28
+text = "Night 6"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="." unique_id=1550555830]
+offset_left = 531.0
+offset_top = 400.0
+offset_right = 680.0
+offset_bottom = 478.0
+theme_override_font_sizes/font_size = 28
+text = "Night 5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="." unique_id=1186323881]
+offset_left = 208.0
+offset_top = 398.0
+offset_right = 357.0
+offset_bottom = 476.0
+theme_override_font_sizes/font_size = 28
+text = "Night 4"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="." unique_id=726884439]
+offset_left = 206.0
+offset_top = 93.0
+offset_right = 355.0
+offset_bottom = 171.0
+theme_override_font_sizes/font_size = 28
+text = "Night 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="." unique_id=514570955]
+offset_left = 524.0
+offset_top = 91.0
+offset_right = 673.0
+offset_bottom = 169.0
+theme_override_font_sizes/font_size = 28
+text = "Night 2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="button_down" from="night1" to="Area2D" method="_on_night_1_button_down"]
 [connection signal="button_down" from="night2" to="Area2D" method="_on_night_2_button_down"]
 [connection signal="button_down" from="night3" to="Area2D" method="_on_night_3_button_down"]
