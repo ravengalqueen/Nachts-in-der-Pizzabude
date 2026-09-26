@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cn4esj4j5hrmm" path="res://JUMPSCARE.gd" id="1_6hf43"]
 [ext_resource type="Texture2D" uid="uid://b3jsj34224w5x" path="res://ui_elements/graphics/codi_raw-removebg-preview.png" id="2_pmq77"]
 [ext_resource type="Texture2D" uid="uid://bysafawrsimb4" path="res://ui_elements/graphics/39 (2).png" id="3_v3xeu"]
+[ext_resource type="Texture2D" uid="uid://qdq3wgf2gcg3" path="res://resources/images/blandt_jumpscare.png" id="4_v3xeu"]
 
 [node name="Node2D" type="Node2D" unique_id=182236669]
 
@@ -18,3 +19,8 @@ texture = ExtResource("2_pmq77")
 position = Vector2(549, 493)
 scale = Vector2(2.3662791, 1.7934783)
 texture = ExtResource("3_v3xeu")
+
+[node name="blandtscary" type="Sprite2D" parent="Area2D" unique_id=433209146]
+position = Vector2(588, 454.00006)
+scale = Vector2(1.5637021, 1.7520324)
+texture = ExtResource("4_v3xeu")

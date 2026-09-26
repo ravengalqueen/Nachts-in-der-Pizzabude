@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://dup0kwerb8mdo" path="res://Office1.gd" id="1_v8yy1"]
 [ext_resource type="Texture2D" uid="uid://c8lc73m1oip0w" path="res://ui_elements/graphics/codi_side.png" id="3_sd5p1"]
 [ext_resource type="PackedScene" uid="uid://bdw4plf3lptl5" path="res://ui_elements/energy_level.tscn" id="5_7mdc4"]
+[ext_resource type="PackedScene" uid="uid://b7yxn4cogjrd" path="res://animatronics/blandt.tscn" id="6_ri6db"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4qxub"]
 size = Vector2(609, 39.75)
@@ -13,6 +14,9 @@ size = Vector2(609, 39.75)
 script = ExtResource("1_tn3ur")
 
 [node name="cams" parent="." unique_id=1866859984 instance=ExtResource("1_4qxub")]
+light_mask = 2
+visibility_layer = 2
+z_index = 1
 
 [node name="Codi" parent="cams/storage_room" parent_id_path=PackedInt32Array(1866859984, 424177924) index="1" unique_id=733439042]
 position = Vector2(640.00006, 466.65128)
@@ -39,7 +43,11 @@ offset_right = 1108.0
 offset_bottom = 422.0
 
 [node name="EnergyLevel" parent="." unique_id=1025423073 instance=ExtResource("5_7mdc4")]
+z_index = 1
 position = Vector2(92, 64)
+
+[node name="Blandt" parent="." unique_id=1896544380 instance=ExtResource("6_ri6db")]
+position = Vector2(17, 480)
 
 [connection signal="visibility_changed" from="cams" to="." method="_on_cams_visibility_changed"]
 [connection signal="mouse_entered" from="Area2D" to="Area2D" method="_on_mouse_entered"]
