@@ -14,7 +14,7 @@ offset_top = 401.0
 offset_right = 695.0
 offset_bottom = 458.0
 
-[node name="Main Menu" type="Button" parent="." unique_id=1537843958]
+[node name="mainmenu" type="Button" parent="." unique_id=1537843958]
 offset_left = 480.0
 offset_top = 501.0
 offset_right = 695.0
@@ -33,4 +33,4 @@ vertical_alignment = 1
 structured_text_bidi_override = 1
 
 [connection signal="button_down" from="nextnight" to="Area2D" method="_on_nextnight_button_down"]
-[connection signal="button_down" from="Main Menu" to="Area2D" method="_on_main_menu_button_down"]
+[connection signal="button_down" from="mainmenu" to="Area2D" method="_on_mainmenu_button_down"]
