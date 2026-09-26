@@ -18,8 +18,8 @@ var blandt
 @onready var door_right = $"../DoorRight"
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	blandt = $"../Blandt"
-	cams = $"../cams"
+	blandt = $"../../Blandt"
+	cams = $"../../cams"
 	cams.hide()
 	_Nighttimer()
 	_testing_battery()

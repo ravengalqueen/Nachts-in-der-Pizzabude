@@ -22,20 +22,17 @@ func _jumpscare():
 	elif globals.thritynine_jumpscare == true:
 		thrityninescary.show()
 		codiscary.hide()
-<<<<<<< HEAD
 		blandtscary.hide()
 	elif globals.blandt_jumpscare == true:
 		print("blandtaiaiaiaiaiaiaiaaaiaii")
 		blandtscary.show()
 		codiscary.hide()
 		thrityninescary.hide()
-=======
 		await get_tree().create_timer(8.0).timeout
 		get_tree().change_scene_to_file("res://YOUWON.tscn")
 	elif globals.blandt_jumpscare == true:
 		await get_tree().create_timer(8.0).timeout
 		get_tree().change_scene_to_file("res://YOUWON.tscn")
->>>>>>> 290b4a4c02e7828098f683e562b866569efefd9b
 	elif globals.petar_jumpscare == true:
 		await get_tree().create_timer(8.0).timeout
 		get_tree().change_scene_to_file("res://YOUWON.tscn")

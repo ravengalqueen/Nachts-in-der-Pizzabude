@@ -9,11 +9,12 @@
 [ext_resource type="Texture2D" uid="uid://bl80msrcflkw" path="res://ui_elements/graphics/office_lights_off.png" id="4_mfdlj"]
 [ext_resource type="Texture2D" uid="uid://b77d2oxlsyji3" path="res://ui_elements/graphics/playroom_unfinished.png" id="4_ri6db"]
 [ext_resource type="PackedScene" uid="uid://bdw4plf3lptl5" path="res://ui_elements/energy_level.tscn" id="5_7mdc4"]
-[ext_resource type="PackedScene" uid="uid://b7yxn4cogjrd" path="res://animatronics/blandt.tscn" id="6_ri6db"]
 [ext_resource type="Texture2D" uid="uid://cd4yfy6kqsvdj" path="res://icon.svg" id="6_712jp"]
 [ext_resource type="Script" uid="uid://cvu5mf71brwn" path="res://clock.gd" id="6_31274"]
+[ext_resource type="PackedScene" uid="uid://b7yxn4cogjrd" path="res://animatronics/blandt.tscn" id="6_ri6db"]
 [ext_resource type="Texture2D" uid="uid://cd2m58slop8y0" path="res://ui_elements/graphics/door_left.png" id="7_mfdlj"]
 [ext_resource type="Texture2D" uid="uid://cbjwwuq3txnh2" path="res://ui_elements/graphics/door_right.png" id="8_712jp"]
+[ext_resource type="AudioStream" uid="uid://c575k4u3i5ji0" path="res://resources/music/play_area.ogg" id="12_p76y2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4qxub"]
 size = Vector2(609, 39.75)
@@ -85,11 +86,13 @@ offset_right = 309.0
 offset_bottom = 405.0
 text = "lights"
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="office" unique_id=1139607450]
+
 [node name="cams" parent="." unique_id=1866859984 instance=ExtResource("1_4qxub")]
+visible = false
 light_mask = 2
 visibility_layer = 2
 z_index = 1
-visible = false
 
 [node name="Codi" parent="cams/storage_room" parent_id_path=PackedInt32Array(1866859984, 424177924) index="1" unique_id=733439042]
 position = Vector2(640.00006, 466.65128)
@@ -105,6 +108,11 @@ texture = ExtResource("4_ri6db")
 visible = true
 position = Vector2(681.45917, 444)
 scale = Vector2(0.7670233, 0.5248829)
+
+[node name="Soundtrack_Play_area" type="AudioStreamPlayer" parent="cams" unique_id=976819452]
+stream = ExtResource("12_p76y2")
+
+[node name="Soundtrack_kitchen" type="AudioStreamPlayer" parent="cams" unique_id=105600181]
 
 [node name="Label" type="Label" parent="." unique_id=1942648176]
 offset_left = 1008.0
