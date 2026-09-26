@@ -15,7 +15,6 @@ func _on_startgamebutt_button_down() -> void:
 	if globals.nightunl == 1:
 		globals.night ==1
 		get_tree().change_scene_to_file("res://Office1.tscn")
-		print("feddyfasbar")
 	elif globals.nightunl == 2:
 		globals.night == 2
 		get_tree().change_scene_to_file("res://Office1.tscn")

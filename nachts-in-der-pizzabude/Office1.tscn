@@ -5,12 +5,15 @@
 [ext_resource type="Script" uid="uid://dup0kwerb8mdo" path="res://Office1.gd" id="1_v8yy1"]
 [ext_resource type="Texture2D" uid="uid://c8lc73m1oip0w" path="res://ui_elements/graphics/codi_side.png" id="3_sd5p1"]
 [ext_resource type="Texture2D" uid="uid://b77d2oxlsyji3" path="res://ui_elements/graphics/playroom_unfinished.png" id="4_ri6db"]
+
+[ext_resource type="Script" uid="uid://cvu5mf71brwn" path="res://clock.gd" id="5_7mdc4"]
 [ext_resource type="PackedScene" uid="uid://bdw4plf3lptl5" path="res://ui_elements/energy_level.tscn" id="5_7mdc4"]
+
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4qxub"]
 size = Vector2(609, 39.75)
 
-[node name="Node2D" type="Node2D" unique_id=177538174]
+[node name="Node2D2" type="Node2D" unique_id=177538174]
 script = ExtResource("1_tn3ur")
 
 [node name="cams" parent="." unique_id=1866859984 instance=ExtResource("1_4qxub")]
@@ -52,8 +55,26 @@ offset_top = 304.0
 offset_right = 1108.0
 offset_bottom = 422.0
 
+
+[node name="Label" type="Label" parent="." unique_id=1942648176]
+offset_left = 1008.0
+offset_top = 24.0
+offset_right = 1118.0
+offset_bottom = 71.0
+theme_override_font_sizes/font_size = 36
+script = ExtResource("5_7mdc4")
+
+[node name="Label" type="Label" parent="Label" unique_id=1129937440]
+layout_mode = 0
+offset_left = 34.0
+offset_right = 151.0
+offset_bottom = 68.0
+theme_override_font_sizes/font_size = 36
+text = "AM"
+
 [node name="EnergyLevel" parent="." unique_id=1025423073 instance=ExtResource("5_7mdc4")]
 position = Vector2(92, 64)
+
 
 [connection signal="visibility_changed" from="cams" to="." method="_on_cams_visibility_changed"]
 [connection signal="mouse_entered" from="Area2D" to="Area2D" method="_on_mouse_entered"]
