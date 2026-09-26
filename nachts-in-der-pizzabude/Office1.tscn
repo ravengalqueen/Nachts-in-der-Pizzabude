@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://c0ds4t102a2jw" path="res://cam_visibility.gd" id="1_tn3ur"]
 [ext_resource type="Script" uid="uid://dup0kwerb8mdo" path="res://Office1.gd" id="1_v8yy1"]
 [ext_resource type="Texture2D" uid="uid://c8lc73m1oip0w" path="res://ui_elements/graphics/codi_side.png" id="3_sd5p1"]
+[ext_resource type="Texture2D" uid="uid://b77d2oxlsyji3" path="res://ui_elements/graphics/playroom_unfinished.png" id="4_ri6db"]
 [ext_resource type="PackedScene" uid="uid://bdw4plf3lptl5" path="res://ui_elements/energy_level.tscn" id="5_7mdc4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4qxub"]
@@ -18,6 +19,19 @@ script = ExtResource("1_tn3ur")
 position = Vector2(640.00006, 466.65128)
 scale = Vector2(0.474934, 0.37188068)
 texture = ExtResource("3_sd5p1")
+
+[node name="play_area" parent="cams" index="4" unique_id=1166466235]
+visible = true
+
+[node name="play_area_image" parent="cams/play_area" index="0" unique_id=1699671702]
+position = Vector2(576, 323.99997)
+scale = Vector2(1.0483136, 0.78736323)
+texture = ExtResource("4_ri6db")
+
+[node name="CodiRaw" parent="cams/play_area" index="2" unique_id=1540706908]
+visible = true
+position = Vector2(681.45917, 444)
+scale = Vector2(0.7670233, 0.5248829)
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1741452117]
 script = ExtResource("1_v8yy1")
