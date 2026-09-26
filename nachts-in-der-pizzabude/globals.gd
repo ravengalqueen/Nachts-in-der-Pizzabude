@@ -19,7 +19,7 @@ func _process(delta: float) -> void:
 		petar_jumpscare = true
 		print("rahhh i am a jumpscare")
 	if codi_jumpscare == true:
-		print("rahhh i am a jumpscare")
+		print("rahhh i am a jumpscare from codi")
 	if thritynine_jumpscare == true:
 		print("rahhhhhhh i am a jumpscare")
 
@@ -58,13 +58,3 @@ func discharge(amount):
 func recharge(amount):
 	amount = clamp(amount, 0.1, 100.0)
 	energy = clamp((energy+amount), 0.0, 100.0)
-
-
-
-	
-
-
-
-
-			
-	

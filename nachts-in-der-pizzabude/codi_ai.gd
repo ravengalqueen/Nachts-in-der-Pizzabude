@@ -26,6 +26,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if globals.camera_position == globals.codi_position:
 		same_cam = true
+		_same_camera()
 	else:
 		same_cam = false
 	
@@ -34,6 +35,7 @@ func _movement():
 		await get_tree().create_timer(12).timeout
 		if randi_range(1,20) <= level: 
 			globals.codi_position = randi_range(2,7)
+			print("codi" + str(globals.codi_position))
 			
 
 func _same_camera():

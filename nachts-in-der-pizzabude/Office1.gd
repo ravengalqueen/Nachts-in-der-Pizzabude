@@ -30,7 +30,7 @@ func _loser():
 		get_tree().change_scene_to_file("res://JUMPSCARE.tscn")
 		
 func _Nighttimer():
-	while true:
+	while globals.hours < 6:
 		await get_tree().create_timer(0.2).timeout
 		globals.hours += 1 
 		if globals.hours == 6:

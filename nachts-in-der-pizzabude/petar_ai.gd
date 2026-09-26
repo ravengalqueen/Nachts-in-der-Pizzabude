@@ -25,12 +25,12 @@ func _process(delta: float) -> void:
 	pass
 		
 func _movement():
-	while true:
+	while globals.hours < 6:
 		await get_tree().create_timer(10.7).timeout
 		if randi_range(1,20) <= level:
 			if globals.petar_position < 6:
 				globals.petar_position += 1
-				print(globals.petar_position)
+				print("petar" + str(globals.petar_position))
 				continue
 			elif globals.petar_position == 6:
 				if globals.door_left_open == false:

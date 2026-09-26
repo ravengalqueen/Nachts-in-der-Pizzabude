@@ -6,11 +6,14 @@
 [ext_resource type="Script" uid="uid://cajhmrngeo82f" path="res://codi_ai.gd" id="2_hdvee"]
 [ext_resource type="Texture2D" uid="uid://cd4yfy6kqsvdj" path="res://icon.svg" id="3_7ppic"]
 [ext_resource type="Script" uid="uid://f3gami8yhn47" path="res://petar_ai.gd" id="3_co2ng"]
-[ext_resource type="Texture2D" uid="uid://dfjnyr4w8r36v" path="res://ui_elements/graphics/codi_raw.png" id="4_ptb6a"]
 [ext_resource type="Script" uid="uid://bdsyqdyob4pca" path="res://39_ai.gd" id="4_yfh2k"]
 [ext_resource type="Script" uid="uid://dkrcswc0sdyn" path="res://highdrough;_ai.gd" id="5_rukh5"]
 [ext_resource type="Script" uid="uid://c3pt7huqnp02j" path="res://Stagecam.gd" id="5_tibft"]
 [ext_resource type="Script" uid="uid://b507dlbst8s4w" path="res://animatronics/blandt_ai.gd" id="6_3fd42"]
+[ext_resource type="Texture2D" uid="uid://bysafawrsimb4" path="res://ui_elements/graphics/39 (2).png" id="9_co2ng"]
+[ext_resource type="Texture2D" uid="uid://b3jsj34224w5x" path="res://ui_elements/graphics/codi_raw-removebg-preview.png" id="11_yfh2k"]
+[ext_resource type="Texture2D" uid="uid://np3otl1sp1gl" path="res://ui_elements/graphics/storage.png" id="12_yfh2k"]
+[ext_resource type="PackedScene" uid="uid://t5jf4q36537w" path="res://minigames/recharge_lever.tscn" id="13_rukh5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0kbmt"]
 size = Vector2(480, 38)
@@ -49,9 +52,9 @@ scale = Vector2(2.021485, 1.1533048)
 texture = ExtResource("2_15y2n")
 
 [node name="39" type="Sprite2D" parent="stage" unique_id=1731569234]
-position = Vector2(1094.4003, -71.18762)
-scale = Vector2(3.6562512, 5.8609996)
-texture = ExtResource("3_7ppic")
+position = Vector2(900.00006, -41.069786)
+scale = Vector2(2.8768544, 1.6155809)
+texture = ExtResource("9_co2ng")
 
 [node name="petar" type="Sprite2D" parent="stage" unique_id=176964887]
 position = Vector2(-1116.0005, -2.738037)
@@ -59,7 +62,9 @@ scale = Vector2(4.4437513, 6.3957624)
 texture = ExtResource("3_7ppic")
 
 [node name="codi" type="Sprite2D" parent="stage" unique_id=1948671247]
-texture = ExtResource("4_ptb6a")
+position = Vector2(-7.199809, -52.021652)
+scale = Vector2(2.284616, 1.8983365)
+texture = ExtResource("11_yfh2k")
 
 [node name="main_area" type="Area2D" parent="." unique_id=274572091]
 visible = false
@@ -71,9 +76,9 @@ texture = ExtResource("3_7ppic")
 
 [node name="CodiRaw" type="Sprite2D" parent="main_area" unique_id=694024715]
 visible = false
-position = Vector2(736, 371.00006)
-scale = Vector2(0.41339868, 0.40260476)
-texture = ExtResource("4_ptb6a")
+position = Vector2(703.99347, 405.1093)
+scale = Vector2(0.56727636, 0.5163023)
+texture = ExtResource("11_yfh2k")
 
 [node name="petar" type="Sprite2D" parent="main_area" unique_id=1566909429]
 visible = false
@@ -87,18 +92,33 @@ scale = Vector2(1.453125, 1.6328125)
 texture = ExtResource("3_7ppic")
 
 [node name="storage_room" type="Area2D" parent="." unique_id=424177924]
-visible = false
 
 [node name="storage_room_image" type="Sprite2D" parent="storage_room" unique_id=68128961]
-position = Vector2(575.5, 325.5)
-scale = Vector2(8.9921875, 5.1015625)
-texture = ExtResource("3_7ppic")
+position = Vector2(577, 325.49997)
+scale = Vector2(0.95065784, 0.7064622)
+texture = ExtResource("12_yfh2k")
 
 [node name="Codi" type="Sprite2D" parent="storage_room" unique_id=733439042]
 visible = false
-position = Vector2(433, 322.00006)
-scale = Vector2(0.3398693, 0.4207248)
-texture = ExtResource("4_ptb6a")
+position = Vector2(667.00006, 411.99997)
+scale = Vector2(0.77727515, 0.75500005)
+texture = ExtResource("11_yfh2k")
+
+[node name="recharge_crank" parent="storage_room" unique_id=761692067 instance=ExtResource("13_rukh5")]
+position = Vector2(-113.99997, 64.00003)
+
+[node name="base" parent="storage_room/recharge_crank" index="0" unique_id=32295677]
+position = Vector2(406.24997, 376.24997)
+scale = Vector2(1.7485151, 1.855469)
+
+[node name="knob" parent="storage_room/recharge_crank" index="1" unique_id=277386202]
+position = Vector2(487.5, 291.24997)
+
+[node name="Button" parent="storage_room/recharge_crank/knob" index="0" unique_id=661262444]
+offset_left = -30.645935
+offset_top = -8.20668
+offset_right = -150.64594
+offset_bottom = -128.2067
 
 [node name="play_area" type="Area2D" parent="." unique_id=1166466235]
 visible = false
@@ -116,9 +136,16 @@ texture = ExtResource("3_7ppic")
 
 [node name="CodiRaw" type="Sprite2D" parent="play_area" unique_id=1540706908]
 visible = false
-position = Vector2(469, 135)
+position = Vector2(464, 165)
 scale = Vector2(0.83251625, 0.2964326)
-texture = ExtResource("4_ptb6a")
+texture = ExtResource("11_yfh2k")
+
+[node name="call_button" type="Button" parent="play_area" unique_id=1229824949]
+offset_left = 43.0
+offset_top = 352.0
+offset_right = 305.0
+offset_bottom = 424.0
+text = "call Highdrough;"
 
 [node name="kitchen" type="Area2D" parent="." unique_id=1791761359]
 visible = false
@@ -134,7 +161,7 @@ texture = ExtResource("3_7ppic")
 visible = false
 position = Vector2(-259.17352, -49.84617)
 scale = Vector2(0.24395017, 0.28833085)
-texture = ExtResource("4_ptb6a")
+texture = ExtResource("11_yfh2k")
 
 [node name="hallway_left" type="Area2D" parent="." unique_id=686455424]
 visible = false
@@ -155,10 +182,9 @@ position = Vector2(969, 138)
 texture = ExtResource("3_7ppic")
 
 [node name="CodiRaw" type="Sprite2D" parent="hallway_left" unique_id=845970940]
-visible = false
 position = Vector2(445, 231.00005)
 scale = Vector2(0.4591503, 0.3295583)
-texture = ExtResource("4_ptb6a")
+texture = ExtResource("11_yfh2k")
 
 [node name="hallway_right" type="Area2D" parent="." unique_id=1852545815]
 visible = false
@@ -170,9 +196,9 @@ texture = ExtResource("3_7ppic")
 
 [node name="codi" type="Sprite2D" parent="hallway_right" unique_id=415296256]
 visible = false
-position = Vector2(328, 337)
-scale = Vector2(0.42973855, 0.4184598)
-texture = ExtResource("4_ptb6a")
+position = Vector2(340.3072, 354.73102)
+scale = Vector2(0.4889077, 0.4775632)
+texture = ExtResource("11_yfh2k")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=912324782]
 script = ExtResource("5_tibft")
@@ -242,6 +268,8 @@ offset_right = 1018.0
 offset_bottom = 651.0
 color = Color(0.19506672, 0.19506672, 0.19506669, 1)
 
+[connection signal="button_down" from="play_area/call_button" to="." method="_on_call_button_button_down"]
+[connection signal="button_up" from="play_area/call_button" to="." method="_on_call_button_button_up"]
 [connection signal="mouse_entered" from="Area2D" to="Area2D" method="_on_mouse_entered"]
 [connection signal="button_down" from="cam_map/cam_stage" to="." method="_on_cam_stage_button_down"]
 [connection signal="button_down" from="cam_map/cam_main" to="." method="_on_cam_main_button_down"]
@@ -250,3 +278,5 @@ color = Color(0.19506672, 0.19506672, 0.19506669, 1)
 [connection signal="button_down" from="cam_map/cam_kitchen" to="." method="_on_cam_kitchen_button_down"]
 [connection signal="button_down" from="cam_map/cam_hall1" to="." method="_on_cam_hall_1_button_down"]
 [connection signal="button_down" from="cam_map/cam_hall2" to="." method="_on_cam_hall_2_button_down"]
+
+[editable path="storage_room/recharge_crank"]
