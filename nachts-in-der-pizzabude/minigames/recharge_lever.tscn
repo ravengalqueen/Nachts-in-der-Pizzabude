@@ -4,11 +4,12 @@
 [ext_resource type="Script" uid="uid://cm3m7b4f4mj6f" path="res://minigames/knob.gd" id="1_qaulb"]
 
 [node name="recharge_crank" type="Node2D" unique_id=761692067]
-position = Vector2(16, 12)
+position = Vector2(85.99999, 97.99999)
+scale = Vector2(0.79999995, 0.8)
 
 [node name="base" type="Sprite2D" parent="." unique_id=32295677]
-position = Vector2(541, 305)
-scale = Vector2(1.8984376, 1.4999999)
+position = Vector2(658.75, 305.00003)
+scale = Vector2(5.04, 5)
 texture = ExtResource("1_1qlp0")
 
 [node name="knob" type="Sprite2D" parent="." unique_id=277386202]

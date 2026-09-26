@@ -1,5 +1,5 @@
 extends Node
-var energy = 50.0
+var energy = 100.0
 
 var hours = 0
 var night = 1
