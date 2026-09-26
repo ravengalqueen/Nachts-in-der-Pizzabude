@@ -3,10 +3,16 @@
 [ext_resource type="PackedScene" uid="uid://dwfg5ugqvtlyk" path="res://cams.tscn" id="1_4qxub"]
 [ext_resource type="Script" uid="uid://c0ds4t102a2jw" path="res://cam_visibility.gd" id="1_tn3ur"]
 [ext_resource type="Script" uid="uid://dup0kwerb8mdo" path="res://Office1.gd" id="1_v8yy1"]
+[ext_resource type="Script" uid="uid://xyhs6c71s4jc" path="res://office.gd" id="2_1n8mr"]
 [ext_resource type="Texture2D" uid="uid://c8lc73m1oip0w" path="res://ui_elements/graphics/codi_side.png" id="3_sd5p1"]
+[ext_resource type="Texture2D" uid="uid://dfrnueaux5e16" path="res://ui_elements/graphics/office_lights_on.png" id="3_ytuxu"]
+[ext_resource type="Texture2D" uid="uid://bl80msrcflkw" path="res://ui_elements/graphics/office_lights_off.png" id="4_mfdlj"]
 [ext_resource type="Texture2D" uid="uid://b77d2oxlsyji3" path="res://ui_elements/graphics/playroom_unfinished.png" id="4_ri6db"]
 [ext_resource type="PackedScene" uid="uid://bdw4plf3lptl5" path="res://ui_elements/energy_level.tscn" id="5_7mdc4"]
+[ext_resource type="Texture2D" uid="uid://cd4yfy6kqsvdj" path="res://icon.svg" id="6_712jp"]
 [ext_resource type="Script" uid="uid://cvu5mf71brwn" path="res://clock.gd" id="6_31274"]
+[ext_resource type="Texture2D" uid="uid://cd2m58slop8y0" path="res://ui_elements/graphics/door_left.png" id="7_mfdlj"]
+[ext_resource type="Texture2D" uid="uid://cbjwwuq3txnh2" path="res://ui_elements/graphics/door_right.png" id="8_712jp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4qxub"]
 size = Vector2(609, 39.75)
@@ -14,44 +20,87 @@ size = Vector2(609, 39.75)
 [node name="Node2D2" type="Node2D" unique_id=177538174]
 script = ExtResource("1_tn3ur")
 
+[node name="office" type="Area2D" parent="." unique_id=169459903]
+script = ExtResource("2_1n8mr")
+
+[node name="OfficeLightsOn" type="Sprite2D" parent="office" unique_id=90641895]
+position = Vector2(581.5, 325.5)
+scale = Vector2(1.0565178, 0.79100853)
+texture = ExtResource("3_ytuxu")
+
+[node name="OfficeLightsOff" type="Sprite2D" parent="office" unique_id=865188454]
+position = Vector2(581.5, 325.5)
+scale = Vector2(1.057, 0.791)
+texture = ExtResource("4_mfdlj")
+
+[node name="petar" type="Sprite2D" parent="office" unique_id=135215111]
+visible = false
+position = Vector2(69.49999, 460.5)
+scale = Vector2(0.3667546, 0.5547113)
+texture = ExtResource("3_sd5p1")
+
+[node name="highdrough" type="Sprite2D" parent="office" unique_id=1323181448]
+visible = false
+position = Vector2(44, 449)
+texture = ExtResource("6_712jp")
+
+[node name="DoorLeft" type="Sprite2D" parent="office" unique_id=589963640]
+visible = false
+position = Vector2(44.499996, 464)
+scale = Vector2(1.2575758, 0.7895878)
+texture = ExtResource("7_mfdlj")
+
+[node name="DoorRight" type="Sprite2D" parent="office" unique_id=1055347534]
+visible = false
+position = Vector2(1128.5, 463)
+scale = Vector2(1.0000004, 0.8082192)
+texture = ExtResource("8_712jp")
+
+[node name="Area2D" type="Area2D" parent="office" unique_id=1741452117]
+script = ExtResource("1_v8yy1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="office/Area2D" unique_id=1344511697]
+position = Vector2(570, 631.125)
+shape = SubResource("RectangleShape2D_4qxub")
+
+[node name="doorleft" type="Button" parent="office" unique_id=1611602882]
+offset_left = -2.0
+offset_top = 290.0
+offset_right = 70.0
+offset_bottom = 568.0
+flat = true
+
+[node name="doorright" type="Button" parent="office" unique_id=1063307401]
+offset_left = 1100.0
+offset_top = 289.0
+offset_right = 1163.0
+offset_bottom = 568.0
+flat = true
+
+[node name="Button" type="Button" parent="office" unique_id=2028109108]
+offset_left = 190.0
+offset_top = 346.0
+offset_right = 309.0
+offset_bottom = 405.0
+text = "lights"
+
 [node name="cams" parent="." unique_id=1866859984 instance=ExtResource("1_4qxub")]
+visible = false
 
 [node name="Codi" parent="cams/storage_room" parent_id_path=PackedInt32Array(1866859984, 424177924) index="1" unique_id=733439042]
 position = Vector2(640.00006, 466.65128)
 scale = Vector2(0.474934, 0.37188068)
 texture = ExtResource("3_sd5p1")
 
-[node name="play_area" parent="cams" index="4" unique_id=1166466235]
-visible = true
-
-[node name="play_area_image" parent="cams/play_area" index="0" unique_id=1699671702]
+[node name="play_area_image" parent="cams/play_area" parent_id_path=PackedInt32Array(1866859984, 1166466235) index="0" unique_id=1699671702]
 position = Vector2(576, 323.99997)
 scale = Vector2(1.0483136, 0.78736323)
 texture = ExtResource("4_ri6db")
 
-[node name="CodiRaw" parent="cams/play_area" index="2" unique_id=1540706908]
+[node name="CodiRaw" parent="cams/play_area" parent_id_path=PackedInt32Array(1866859984, 1166466235) index="2" unique_id=1540706908]
 visible = true
 position = Vector2(681.45917, 444)
 scale = Vector2(0.7670233, 0.5248829)
-
-[node name="Area2D" type="Area2D" parent="." unique_id=1741452117]
-script = ExtResource("1_v8yy1")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1344511697]
-position = Vector2(570, 631.125)
-shape = SubResource("RectangleShape2D_4qxub")
-
-[node name="doorleft" type="Button" parent="." unique_id=1611602882]
-offset_left = 53.0
-offset_top = 350.0
-offset_right = 150.0
-offset_bottom = 422.0
-
-[node name="doorright" type="Button" parent="." unique_id=1063307401]
-offset_left = 977.0
-offset_top = 304.0
-offset_right = 1108.0
-offset_bottom = 422.0
 
 [node name="Label" type="Label" parent="." unique_id=1942648176]
 offset_left = 1008.0
@@ -72,10 +121,11 @@ text = "AM"
 [node name="EnergyLevel" parent="." unique_id=1025423073 instance=ExtResource("5_7mdc4")]
 position = Vector2(92, 64)
 
+[connection signal="mouse_entered" from="office/Area2D" to="office/Area2D" method="_on_mouse_entered"]
+[connection signal="pressed" from="office/doorleft" to="office/Area2D" method="_on_doorleft_pressed"]
+[connection signal="pressed" from="office/doorright" to="office/Area2D" method="_on_doorright_pressed"]
+[connection signal="button_down" from="office/Button" to="office/Area2D" method="_on_button_button_down"]
 [connection signal="visibility_changed" from="cams" to="." method="_on_cams_visibility_changed"]
-[connection signal="mouse_entered" from="Area2D" to="Area2D" method="_on_mouse_entered"]
-[connection signal="pressed" from="doorleft" to="Area2D" method="_on_doorleft_pressed"]
-[connection signal="pressed" from="doorright" to="Area2D" method="_on_doorright_pressed"]
 
 [editable path="cams"]
 [editable path="cams/storage_room/recharge_crank"]
