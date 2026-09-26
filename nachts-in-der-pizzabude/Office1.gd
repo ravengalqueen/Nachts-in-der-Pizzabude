@@ -8,20 +8,24 @@ func _ready() -> void:
 	cams = $"../cams"
 	cams.hide()
 	_Nighttimer()
+	_testing_battery()
 	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	globals.discharge(globals.percent)
+
 
 func _on_mouse_entered():
 	if cams.visible:
 		cams.hide()
+		globals.percent -= 0.005
 		doorleft.show()
 		doorright.show()
 	else:
 		cams.show()
+		globals.percent += 0.005
 		doorleft.hide()
 		doorright.hide()
 	print("harhar")
@@ -48,7 +52,6 @@ func _Nighttimer():
 	while true:
 		await get_tree().create_timer(90.0).timeout
 		globals.hours += 1 
-		globals.discharge(8.5)
 		if globals.hours == 6:
 			get_tree().change_scene_to_file("res://YOUWON.tscn")
 			break
@@ -59,12 +62,26 @@ func _Nighttimer():
 func _on_doorleft_pressed() -> void:
 	if globals.door_left_open == true:
 		globals.door_left_open = false
+
+		globals.percent += 0.005
 	elif globals.door_left_open == false:
+		globals.percent -= 0.005
 		globals.door_left_open = true
 
 
 func _on_doorright_pressed() -> void:
 	if globals.door_left_open == true:
+		globals.percent += 0.005
 		globals.door_left_open = false
 	elif globals.door_left_open == false:
+		globals.percent -= 0.005
 		globals.door_left_open = true
+
+		
+
+
+func _testing_battery():
+	for i in range(30):
+		await get_tree().create_timer(2).timeout
+		print(globals.energy)
+
