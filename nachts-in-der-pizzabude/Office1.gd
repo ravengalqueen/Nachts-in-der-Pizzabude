@@ -82,4 +82,3 @@ func _testing_battery():
 	for i in range(30):
 		await get_tree().create_timer(2).timeout
 		print(globals.energy)
-
