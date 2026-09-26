@@ -55,19 +55,12 @@ func recharge(amount):
 	amount = clamp(amount, 0.1, 100.0)
 	energy = clamp((energy+amount), 0.0, 100.0)
 
-func _ready() -> void:
-	_Nighttimer()
+
 
 	
 
 
-func _Nighttimer():
-	while true:
-		await get_tree().create_timer(90.0).timeout
-		hours+=1 
-		if hours == 6:
-			get_tree().change_scene_to_file("res://Mainmenu1.tscn")
-			break
+
 
 			
 	

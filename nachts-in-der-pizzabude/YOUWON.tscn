@@ -1,14 +1,36 @@
 [gd_scene format=3 uid="uid://c6eium87ifjxa"]
 
-[ext_resource type="Script" uid="uid://byvab7ld3oxv5" path="res://YOUWON.gd" id="1_abuyn"]
+[ext_resource type="Script" uid="uid://1l0a4pw01yju" path="res://YOUWON.gd" id="1_abuyn"]
 
 [node name="Node2D" type="Node2D" unique_id=142442387]
 
 [node name="Area2D" type="Area2D" parent="." unique_id=358142581]
 script = ExtResource("1_abuyn")
 
-[node name="Main Menu" type="Button" parent="Area2D" unique_id=1537843958]
-offset_left = 437.0
-offset_top = 359.0
-offset_right = 652.0
-offset_bottom = 416.0
+[node name="nextnight" type="Button" parent="." unique_id=198517347]
+custom_minimum_size = Vector2(215, 57)
+offset_left = 480.0
+offset_top = 401.0
+offset_right = 695.0
+offset_bottom = 458.0
+
+[node name="Main Menu" type="Button" parent="." unique_id=1537843958]
+offset_left = 480.0
+offset_top = 501.0
+offset_right = 695.0
+offset_bottom = 558.0
+
+[node name="Label" type="Label" parent="." unique_id=1082477370]
+offset_left = 277.0
+offset_top = 128.0
+offset_right = 899.0
+offset_bottom = 279.0
+size_flags_stretch_ratio = 20.0
+theme_override_font_sizes/font_size = 61
+text = "YOU WON!"
+horizontal_alignment = 1
+vertical_alignment = 1
+structured_text_bidi_override = 1
+
+[connection signal="button_down" from="nextnight" to="Area2D" method="_on_nextnight_button_down"]
+[connection signal="button_down" from="Main Menu" to="Area2D" method="_on_main_menu_button_down"]
