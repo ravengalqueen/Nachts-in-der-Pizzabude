@@ -3,14 +3,13 @@ extends Area2D
 var cams
 @onready var doorleft = $"../doorleft"
 @onready var doorright = $"../doorright"
-<<<<<<< HEAD
+
 
 var blandt
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	blandt = $"../Blandt"
-	cams = $"../cams"
-=======
+
+
+
 @onready var lights_on = $"../OfficeLightsOn"
 @onready var lights_off = $"../OfficeLightsOff"
 @onready var p_office = $"../petar"
@@ -19,8 +18,8 @@ func _ready() -> void:
 @onready var door_right = $"../DoorRight"
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	cams = $"../../cams"
->>>>>>> 290b4a4c02e7828098f683e562b866569efefd9b
+	blandt = $"../Blandt"
+	cams = $"../cams"
 	cams.hide()
 	_Nighttimer()
 	_testing_battery()
@@ -46,13 +45,10 @@ func _on_mouse_entered():
 		globals.percent += 0.005
 		doorleft.hide()
 		doorright.hide()
-<<<<<<< HEAD
 		if blandt == null:
 			return
 		blandt.make_invisible()
 	print("harhar")
-=======
->>>>>>> 290b4a4c02e7828098f683e562b866569efefd9b
 	
 
 func _loser():
@@ -148,4 +144,3 @@ func _animatronic_in_door():
 	else:
 		h_office.hide()
 	
-

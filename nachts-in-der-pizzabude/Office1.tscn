@@ -9,14 +9,11 @@
 [ext_resource type="Texture2D" uid="uid://bl80msrcflkw" path="res://ui_elements/graphics/office_lights_off.png" id="4_mfdlj"]
 [ext_resource type="Texture2D" uid="uid://b77d2oxlsyji3" path="res://ui_elements/graphics/playroom_unfinished.png" id="4_ri6db"]
 [ext_resource type="PackedScene" uid="uid://bdw4plf3lptl5" path="res://ui_elements/energy_level.tscn" id="5_7mdc4"]
-<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://b7yxn4cogjrd" path="res://animatronics/blandt.tscn" id="6_ri6db"]
-=======
 [ext_resource type="Texture2D" uid="uid://cd4yfy6kqsvdj" path="res://icon.svg" id="6_712jp"]
 [ext_resource type="Script" uid="uid://cvu5mf71brwn" path="res://clock.gd" id="6_31274"]
 [ext_resource type="Texture2D" uid="uid://cd2m58slop8y0" path="res://ui_elements/graphics/door_left.png" id="7_mfdlj"]
 [ext_resource type="Texture2D" uid="uid://cbjwwuq3txnh2" path="res://ui_elements/graphics/door_right.png" id="8_712jp"]
->>>>>>> 290b4a4c02e7828098f683e562b866569efefd9b
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4qxub"]
 size = Vector2(609, 39.75)
@@ -89,13 +86,10 @@ offset_bottom = 405.0
 text = "lights"
 
 [node name="cams" parent="." unique_id=1866859984 instance=ExtResource("1_4qxub")]
-<<<<<<< HEAD
 light_mask = 2
 visibility_layer = 2
 z_index = 1
-=======
 visible = false
->>>>>>> 290b4a4c02e7828098f683e562b866569efefd9b
 
 [node name="Codi" parent="cams/storage_room" parent_id_path=PackedInt32Array(1866859984, 424177924) index="1" unique_id=733439042]
 position = Vector2(640.00006, 466.65128)
@@ -132,16 +126,13 @@ text = "AM"
 z_index = 1
 position = Vector2(92, 64)
 
-<<<<<<< HEAD
 [node name="Blandt" parent="." unique_id=1896544380 instance=ExtResource("6_ri6db")]
 position = Vector2(17, 480)
 
-=======
 [connection signal="mouse_entered" from="office/Area2D" to="office/Area2D" method="_on_mouse_entered"]
 [connection signal="pressed" from="office/doorleft" to="office/Area2D" method="_on_doorleft_pressed"]
 [connection signal="pressed" from="office/doorright" to="office/Area2D" method="_on_doorright_pressed"]
 [connection signal="button_down" from="office/Button" to="office/Area2D" method="_on_button_button_down"]
->>>>>>> 290b4a4c02e7828098f683e562b866569efefd9b
 [connection signal="visibility_changed" from="cams" to="." method="_on_cams_visibility_changed"]
 
 [editable path="cams"]
