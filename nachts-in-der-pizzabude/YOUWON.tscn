@@ -20,7 +20,8 @@ offset_top = 501.0
 offset_right = 695.0
 offset_bottom = 558.0
 
-[node name="Label" type="Label" parent="." unique_id=1082477370]
+[node name="YOUWON" type="Label" parent="." unique_id=1082477370]
+visible = false
 offset_left = 277.0
 offset_top = 128.0
 offset_right = 899.0
@@ -31,6 +32,17 @@ text = "YOU WON!"
 horizontal_alignment = 1
 vertical_alignment = 1
 structured_text_bidi_override = 1
+
+[node name="YOULOSE" type="Label" parent="." unique_id=724265963]
+visible = false
+offset_left = 277.0
+offset_top = 128.0
+offset_right = 955.0
+offset_bottom = 283.0
+theme_override_font_sizes/font_size = 74
+text = "YOU LOSE!"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="button_down" from="nextnight" to="Area2D" method="_on_nextnight_button_down"]
 [connection signal="button_down" from="mainmenu" to="Area2D" method="_on_mainmenu_button_down"]
