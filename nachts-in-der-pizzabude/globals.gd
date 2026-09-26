@@ -1,6 +1,7 @@
 extends Node
 var energy = 50.0
 
+var hours = 0
 var night = 1
 var door_left_open = false
 var door_right_open = true
@@ -28,3 +29,16 @@ func discharge(amount):
 func recharge(amount):
 	amount = clamp(amount, 0.1, 100.0)
 	energy = clamp((energy+amount), 0.0, 100.0)
+
+func _ready() -> void:
+	_Nighttimer()
+	
+	
+func _Nighttimer():
+	while true:
+		get_tree().create_timer(90.0).timeout
+		hours+=1 
+		if hours == 6:
+			get_tree().change_scene_to_file("res://Mainmenu1.tscn")
+			
+	

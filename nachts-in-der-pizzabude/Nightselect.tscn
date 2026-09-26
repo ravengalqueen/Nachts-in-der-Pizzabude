@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://wpldbg1i61x1"]
+
+[ext_resource type="Script" uid="uid://cssyx1dxd46of" path="res://Nightselect.gd" id="1_pd2aj"]
+
+[node name="Node2D" type="Node2D" unique_id=2079392514]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2030700310]
+script = ExtResource("1_pd2aj")
+
+[node name="Night1" type="Button" parent="." unique_id=1793774981]
+offset_right = 8.0
+offset_bottom = 8.0
