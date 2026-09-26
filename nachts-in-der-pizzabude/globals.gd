@@ -6,6 +6,7 @@ var hours = 0
 var night = 1
 var door_left_open = true
 var door_right_open = true
+var percent = 0.05
 
 
 # camera positions
