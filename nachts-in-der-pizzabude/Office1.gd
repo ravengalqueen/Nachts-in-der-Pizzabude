@@ -61,7 +61,6 @@ func _Nighttimer():
 func _on_doorleft_pressed() -> void:
 	if globals.door_left_open == true:
 		globals.door_left_open = false
-
 		globals.percent += 0.005
 	elif globals.door_left_open == false:
 		globals.percent -= 0.005
@@ -69,14 +68,13 @@ func _on_doorleft_pressed() -> void:
 
 
 func _on_doorright_pressed() -> void:
-	if globals.door_left_open == true:
+	if globals.door_right_open == true:
+		globals.door_right_open = false
 		globals.percent += 0.005
-		globals.door_left_open = false
-	elif globals.door_left_open == false:
+	elif globals.door_right_open == false:
 		globals.percent -= 0.005
-		globals.door_left_open = true
-
-		
+		globals.door_right_open = true
+		print("open up buttercup")
 
 
 func _testing_battery():
