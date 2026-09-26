@@ -30,7 +30,10 @@ var petar_position = 1
 var codi_position = 1
 var codi_jumpscare = false
 
-
+# 39 variables, no specific positions 
+# cuz bro is only at the stage and at the office
+var thritynine_waiting = true
+var thritynine_jumpscare = false
 
 
 
