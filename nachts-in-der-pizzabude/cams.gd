@@ -90,6 +90,7 @@ func _on_cam_stage_button_down() -> void:
 	else:
 		p_stage.hide()
 	stage.show()
+	globals.camera_position = 1
 
 
 func _on_cam_main_button_down() -> void:
@@ -107,6 +108,7 @@ func _on_cam_main_button_down() -> void:
 	else: 
 		h_main.show()
 	main.show()
+	globals.camera_position = 2
 
 
 func _on_cam_storage_button_down() -> void:
@@ -116,6 +118,7 @@ func _on_cam_storage_button_down() -> void:
 	else:
 		c_storage.hide()
 	storage.show()
+	globals.camera_position = 3
 
 
 func _on_cam_play_button_down() -> void:
@@ -129,6 +132,7 @@ func _on_cam_play_button_down() -> void:
 	else: 
 		c_play.hide()
 	play.show()
+	globals.camera_position = 4
 
 
 
@@ -139,6 +143,7 @@ func _on_cam_kitchen_button_down() -> void:
 	else:
 		c_kitchen.hide()
 	kitchen.show()
+	globals.camera_position = 5
 	
 
 
@@ -157,6 +162,7 @@ func _on_cam_hall_1_button_down() -> void:
 	else:
 		p_hallone.hide()
 	hallone.show()
+	globals.camera_position = 6
 
 
 func _on_cam_hall_2_button_down() -> void:
@@ -166,6 +172,7 @@ func _on_cam_hall_2_button_down() -> void:
 	else: 
 		c_halltwo.hide()
 	halltwo.show()
+	globals.camera_position = 7
 	
 func _hide_cams():
 	stage.hide()

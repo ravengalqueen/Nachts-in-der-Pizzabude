@@ -3,15 +3,39 @@
 [ext_resource type="Script" uid="uid://c2m0ijygfh62i" path="res://cams.gd" id="1_15y2n"]
 [ext_resource type="Script" uid="uid://dff5yk4fuyy25" path="res://stage_ui.gd" id="1_ioxu0"]
 [ext_resource type="Texture2D" uid="uid://bg52vcg86nupe" path="res://ui_elements/graphics/image.jpg" id="2_15y2n"]
+[ext_resource type="Script" uid="uid://cajhmrngeo82f" path="res://codi_ai.gd" id="2_hdvee"]
 [ext_resource type="Texture2D" uid="uid://cd4yfy6kqsvdj" path="res://icon.svg" id="3_7ppic"]
+[ext_resource type="Script" uid="uid://f3gami8yhn47" path="res://petar_ai.gd" id="3_co2ng"]
 [ext_resource type="Texture2D" uid="uid://dfjnyr4w8r36v" path="res://ui_elements/graphics/codi_raw.png" id="4_ptb6a"]
+[ext_resource type="Script" uid="uid://bdsyqdyob4pca" path="res://39_ai.gd" id="4_yfh2k"]
+[ext_resource type="Script" uid="uid://dkrcswc0sdyn" path="res://highdrough;_ai.gd" id="5_rukh5"]
 [ext_resource type="Script" uid="uid://c3pt7huqnp02j" path="res://Stagecam.gd" id="5_tibft"]
+[ext_resource type="Script" uid="uid://b507dlbst8s4w" path="res://animatronics/blandt_ai.gd" id="6_3fd42"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0kbmt"]
 size = Vector2(480, 38)
 
 [node name="Node2D" type="Node2D" unique_id=1866859984]
 script = ExtResource("1_15y2n")
+
+[node name="animtronic_ais" type="Area2D" parent="." unique_id=1778574866]
+position = Vector2(540, 459)
+scale = Vector2(0.2777777, 0.3652321)
+
+[node name="codi" type="Area2D" parent="animtronic_ais" unique_id=1787328050]
+script = ExtResource("2_hdvee")
+
+[node name="petar" type="Area2D" parent="animtronic_ais" unique_id=2049332368]
+script = ExtResource("3_co2ng")
+
+[node name="39" type="Area2D" parent="animtronic_ais" unique_id=1957821779]
+script = ExtResource("4_yfh2k")
+
+[node name="highdrough" type="Area2D" parent="animtronic_ais" unique_id=694795839]
+script = ExtResource("5_rukh5")
+
+[node name="blandt" type="Area2D" parent="animtronic_ais" unique_id=1522828863]
+script = ExtResource("6_3fd42")
 
 [node name="stage" type="Area2D" parent="." unique_id=2059387708]
 visible = false
