@@ -8,7 +8,7 @@ position = Vector2(85.99999, 97.99999)
 scale = Vector2(0.79999995, 0.8)
 
 [node name="base" type="Sprite2D" parent="." unique_id=32295677]
-position = Vector2(658.75, 305.00003)
+position = Vector2(630.00006, 288.75)
 scale = Vector2(5.04, 5)
 texture = ExtResource("1_1qlp0")
 
