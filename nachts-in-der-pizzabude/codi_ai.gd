@@ -34,7 +34,11 @@ func _movement():
 	while globals.hours < 6: 
 		await get_tree().create_timer(12).timeout
 		if randi_range(1,20) <= level: 
-			globals.codi_position = randi_range(2,7)
+			var new_pos = randi_range(2,7)
+			if globals.camera_position == new_pos:
+				pass
+			else: 
+				globals.codi_position = new_pos
 			print("codi" + str(globals.codi_position))
 			
 

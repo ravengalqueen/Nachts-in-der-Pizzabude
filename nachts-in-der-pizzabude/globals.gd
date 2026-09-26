@@ -1,12 +1,13 @@
 extends Node
 var energy = 100.0
 
+var win = false
 var nightunl = 1
 var hours = 0
 var night = 1
 var door_left_open = true
 var door_right_open = true
-var percent = 0.05
+var percent = 0.005
 
 
 # camera positions
@@ -22,11 +23,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if petar_position == 7: 
 		petar_jumpscare = true
-		print("rahhh i am a jumpscare")
-	if codi_jumpscare == true:
-		print("rahhh i am a jumpscare from codi")
-	if thritynine_jumpscare == true:
-		print("rahhhhhhh i am a jumpscare")
+
 	_loser()
 
 # animatronic positions
@@ -60,11 +57,12 @@ var highdrough_called = false
 # energy system
 
 func discharge(amount):
-	amount = clamp(amount, 0.1, 100.0)
+	amount = clamp(amount, 0.0, 100.0)
 	energy = clamp((energy-amount), 0.0, 100.0)
+	
 
 func recharge(amount):
-	amount = clamp(amount, 0.1, 100.0)
+	amount = clamp(amount, 0.0, 100.0)
 	energy = clamp((energy+amount), 0.0, 100.0)
 	
 func _loser():
