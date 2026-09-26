@@ -1,6 +1,7 @@
 extends Node
 var energy = 100.0
 
+var nightunl = 1
 var hours = 0
 var night = 1
 var door_left_open = false
@@ -39,6 +40,6 @@ func _Nighttimer():
 		get_tree().create_timer(90.0).timeout
 		hours+=1 
 		if hours == 6:
-			get_tree().change_scene_to_file("res://Mainmenu1.tscn")
-			
+			get_tree().change_scene_to_file("res://YOUWON.tscn")
+			break
 	

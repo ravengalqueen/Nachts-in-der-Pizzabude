@@ -6,3 +6,15 @@
 
 [node name="Area2D" type="Area2D" parent="." unique_id=2033992952]
 script = ExtResource("1_dm1nb")
+
+[node name="StartGamebutt" type="Button" parent="." unique_id=907306705]
+offset_left = 38.0
+offset_top = 216.0
+offset_right = 148.0
+offset_bottom = 262.0
+
+[node name="Nightsbutt" type="Button" parent="." unique_id=378813150]
+offset_left = 36.0
+offset_top = 297.0
+offset_right = 158.0
+offset_bottom = 343.0
