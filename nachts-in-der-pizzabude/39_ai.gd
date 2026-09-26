@@ -7,7 +7,7 @@ var energy_stealer: bool
 func _ready() -> void:
 	match globals.night:
 		1: 
-			time = 2
+			time = 0.3
 			energy_stealer = true
 		2: 
 			time = 1.7
