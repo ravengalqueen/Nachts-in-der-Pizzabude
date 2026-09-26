@@ -1,5 +1,5 @@
 extends Area2D
-
+@onready var codiscary = $"../codiscary"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -13,6 +13,7 @@ func _process(delta: float) -> void:
 func _jumpscare():
 	if globals.codi_jumpscare == true:
 		print("codihoarhoarhoar")
+		codiscary.show()
 	elif globals.thritynine_jumpscare == true:
 		print("39rahhhhh")
 	elif globals.blandt_jumpscare == true:

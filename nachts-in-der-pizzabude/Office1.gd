@@ -1,6 +1,8 @@
 extends Area2D
 
 var cams
+@onready var doorleft = $"../doorleft"
+@onready var doorright = $"../doorright"
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	cams = $"../cams"
@@ -16,8 +18,12 @@ func _process(delta: float) -> void:
 func _on_mouse_entered():
 	if cams.visible:
 		cams.hide()
+		doorleft.show()
+		doorright.show()
 	else:
 		cams.show()
+		doorleft.hide()
+		doorright.hide()
 	print("harhar")
 	
 
