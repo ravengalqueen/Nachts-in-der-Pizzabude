@@ -53,10 +53,10 @@ func _ready() -> void:
 	
 func _Nighttimer():
 	while true:
-		get_tree().create_timer(90.0).timeout
+		await get_tree().create_timer(90.0).timeout
 		hours+=1 
 		if hours == 6:
-			get_tree().change_scene_to_file("res://YOUWON.tscn")
+			get_tree().change_scene_to_file("res://Mainmenu1.tscn")
 			break
 
 			

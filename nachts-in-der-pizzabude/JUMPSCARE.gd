@@ -9,11 +9,12 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
-
-
-func _on_startgamebutt_button_down() -> void:
-	get_tree().change_scene_to_file("res://Office1.tscn")
-
-
-func _on_nightsbutt_button_down() -> void:
-	get_tree().change_scene_to_file("res://Nightselect.tscn")
+	
+func _jumpscare():
+	if globals.codi_jumpscare == true:
+		print("codihoarhoarhoar")
+	elif globals.thritynine_jumpscare == true:
+		print("39rahhhhh")
+	
+	
+	
