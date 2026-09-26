@@ -14,6 +14,7 @@ var camera_position = 0
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CONFINED
+	camera_position = 0
 
 # animatronic jumpscares
 

@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dwfg5ugqvtlyk" path="res://cams.tscn" id="1_4qxub"]
 [ext_resource type="Script" uid="uid://c0ds4t102a2jw" path="res://cam_visibility.gd" id="1_tn3ur"]
 [ext_resource type="Script" uid="uid://dup0kwerb8mdo" path="res://Office1.gd" id="1_v8yy1"]
+[ext_resource type="Texture2D" uid="uid://c8lc73m1oip0w" path="res://ui_elements/graphics/codi_side.png" id="3_sd5p1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4qxub"]
 size = Vector2(609, 39.75)
@@ -11,6 +12,11 @@ size = Vector2(609, 39.75)
 script = ExtResource("1_tn3ur")
 
 [node name="cams" parent="." unique_id=1866859984 instance=ExtResource("1_4qxub")]
+
+[node name="Codi" parent="cams/storage_room" parent_id_path=PackedInt32Array(1866859984, 424177924) index="1" unique_id=733439042]
+position = Vector2(640.00006, 466.65128)
+scale = Vector2(0.474934, 0.37188068)
+texture = ExtResource("3_sd5p1")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1741452117]
 script = ExtResource("1_v8yy1")

@@ -7,6 +7,7 @@ func _ready() -> void:
 		print(true)
 	else:
 		print(false)
+	globals.camera_position = 0
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
