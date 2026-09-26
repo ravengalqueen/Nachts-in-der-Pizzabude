@@ -1,6 +1,6 @@
 extends Sprite2D
 
-@export var distance = 250.0
+@export var distance = 100.0
 @export var electrical_efficiency = 0.002
 var base
 var dragging = false
