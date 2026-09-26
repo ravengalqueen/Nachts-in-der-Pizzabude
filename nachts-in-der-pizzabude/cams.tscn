@@ -8,15 +8,11 @@
 [ext_resource type="Script" uid="uid://f3gami8yhn47" path="res://petar_ai.gd" id="3_co2ng"]
 [ext_resource type="Script" uid="uid://bdsyqdyob4pca" path="res://39_ai.gd" id="4_yfh2k"]
 [ext_resource type="Script" uid="uid://dkrcswc0sdyn" path="res://highdrough;_ai.gd" id="5_rukh5"]
-[ext_resource type="Script" uid="uid://c3pt7huqnp02j" path="res://Stagecam.gd" id="5_tibft"]
 [ext_resource type="Script" uid="uid://b507dlbst8s4w" path="res://animatronics/blandt_ai.gd" id="6_3fd42"]
 [ext_resource type="Texture2D" uid="uid://bysafawrsimb4" path="res://ui_elements/graphics/39 (2).png" id="9_co2ng"]
 [ext_resource type="Texture2D" uid="uid://b3jsj34224w5x" path="res://ui_elements/graphics/codi_raw-removebg-preview.png" id="11_yfh2k"]
 [ext_resource type="Texture2D" uid="uid://np3otl1sp1gl" path="res://ui_elements/graphics/storage.png" id="12_yfh2k"]
 [ext_resource type="PackedScene" uid="uid://t5jf4q36537w" path="res://minigames/recharge_lever.tscn" id="13_rukh5"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0kbmt"]
-size = Vector2(480, 38)
 
 [node name="Node2D" type="Node2D" unique_id=1866859984]
 script = ExtResource("1_15y2n")
@@ -199,13 +195,6 @@ position = Vector2(340.3072, 354.73102)
 scale = Vector2(0.4889077, 0.4775632)
 texture = ExtResource("11_yfh2k")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=912324782]
-script = ExtResource("5_tibft")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1492028275]
-position = Vector2(602, 630)
-shape = SubResource("RectangleShape2D_0kbmt")
-
 [node name="cam_map" type="Area2D" parent="." unique_id=1990269328]
 
 [node name="cam_stage" type="Button" parent="cam_map" unique_id=1404059640]
@@ -269,7 +258,6 @@ color = Color(0.19506672, 0.19506672, 0.19506669, 1)
 
 [connection signal="button_down" from="play_area/call_button" to="." method="_on_call_button_button_down"]
 [connection signal="button_up" from="play_area/call_button" to="." method="_on_call_button_button_up"]
-[connection signal="mouse_entered" from="Area2D" to="Area2D" method="_on_mouse_entered"]
 [connection signal="button_down" from="cam_map/cam_stage" to="." method="_on_cam_stage_button_down"]
 [connection signal="button_down" from="cam_map/cam_main" to="." method="_on_cam_main_button_down"]
 [connection signal="button_down" from="cam_map/cam_storage" to="." method="_on_cam_storage_button_down"]

@@ -1,8 +1,10 @@
 extends Area2D
 
-
+var cams
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	cams = $"../cams"
+	cams.hide()
 	_Nighttimer()
 	
 
@@ -12,23 +14,13 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_mouse_entered():
-	await get_tree().create_timer(0.4).timeout
-	get_tree().change_scene_to_file("res://cams.tscn")
+	if cams.visible:
+		cams.hide()
+	else:
+		cams.show()
 	print("harhar")
 	
-func _loser():
-	if globals.codi_jumpscare == true:
-		print("codihoarhoarhoar")
-		get_tree().change_scene_to_file("res://JUMPSCARE.tscn")
-	elif globals.thritynine_jumpscare == true:
-		print("39rahhhhh")
-		get_tree().change_scene_to_file("res://JUMPSCARE.tscn")
-	elif globals.blandt_jumpscare == true:
-		print("blandtaiaiaiaiaiaiaiaaaiaii")
-		get_tree().change_scene_to_file("res://JUMPSCARE.tscn")
-	elif globals.petar_jumpscare == true:
-		print("PETARPARKAR")
-		get_tree().change_scene_to_file("res://JUMPSCARE.tscn")
+
 		
 func _Nighttimer():
 	while true:

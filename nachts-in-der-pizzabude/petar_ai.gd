@@ -5,7 +5,7 @@ var level: int
 func _ready() -> void:
 	match globals.night: 
 		1:
-			level = 20
+			level = 3
 		2:
 			level = 4
 		3: 
