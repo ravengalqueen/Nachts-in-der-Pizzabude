@@ -42,6 +42,7 @@ func _loser():
 		get_tree().change_scene_to_file("res://JUMPSCARE.tscn")
 		
 
+
 		
 func _Nighttimer():
 	while true:
