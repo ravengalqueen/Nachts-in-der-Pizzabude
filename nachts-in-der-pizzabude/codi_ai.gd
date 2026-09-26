@@ -2,6 +2,7 @@ extends Node
 
 var level: int
 var same_cam = false
+var aggresive = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -29,5 +30,17 @@ func _process(delta: float) -> void:
 		same_cam = false
 	
 func _movement():
-	pass
+	while true: 
+		await get_tree().create_timer(12).timeout
+		if randi_range(1,20) <= level: 
+			globals.codi_position = randi_range(2,7)
+			
+
+func _same_camera():
+	await get_tree().create_timer(3).timeout
+	if same_cam == true:
+		await get_tree().create_timer(3).timeout
+		if same_cam == true: 
+			globals.codi_jumpscare = true
+	
 	
