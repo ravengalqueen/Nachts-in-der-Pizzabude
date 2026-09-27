@@ -73,7 +73,7 @@ func _loser():
 		
 func _Nighttimer():
 	while true:
-		await get_tree().create_timer(10.0).timeout
+		await get_tree().create_timer(90.0).timeout
 		globals.hours += 1 
 		print("an hour has passed")
 		if randi_range(1,50) == 1:
