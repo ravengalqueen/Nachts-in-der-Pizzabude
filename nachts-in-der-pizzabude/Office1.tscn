@@ -93,6 +93,9 @@ light_mask = 2
 visibility_layer = 2
 z_index = 1
 
+[node name="blandt" parent="cams/animtronic_ais" parent_id_path=PackedInt32Array(1866859984, 1778574866) index="4" unique_id=1522828863 node_paths=PackedStringArray("office")]
+office = NodePath("../../../office/Area2D")
+
 [node name="Codi" parent="cams/storage_room" parent_id_path=PackedInt32Array(1866859984, 424177924) index="1" unique_id=733439042]
 position = Vector2(640.00006, 466.65128)
 scale = Vector2(0.474934, 0.37188068)

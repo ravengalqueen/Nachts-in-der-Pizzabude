@@ -43,10 +43,12 @@ func _movement():
 			
 
 func _same_camera():
-	await get_tree().create_timer(3).timeout
-	if same_cam == true:
-		await get_tree().create_timer(3).timeout
-		if same_cam == true: 
-			globals.codi_jumpscare = true
+	for i in range(6):
+		await get_tree().create_timer(1).timeout
+		if same_cam == false:
+			return
+		else:
+			continue
+	globals.codi_jumpscare = true
 	
 	

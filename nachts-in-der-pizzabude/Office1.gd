@@ -30,6 +30,11 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	globals.discharge(globals.percent)
 
+func ausprbieren():
+	if cams.visible:
+		return true
+	else:
+		return false
 
 func _on_mouse_entered():
 	if cams.visible:
@@ -71,11 +76,11 @@ func _Nighttimer():
 		await get_tree().create_timer(10.0).timeout
 		globals.hours += 1 
 		print("an hour has passed")
-		if randi_range(1,1) == 1:
+		if randi_range(1,1) == 1 and not cams.visible:
 			print("spawn blandt")
 			if blandt == null:
 					return
-			blandt.spawn()
+#			blandt.spawn()
 		if globals.hours == 6:
 			globals.win = true
 			get_tree().change_scene_to_file("res://YOUWON.tscn")
