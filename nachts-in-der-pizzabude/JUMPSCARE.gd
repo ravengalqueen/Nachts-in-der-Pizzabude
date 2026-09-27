@@ -17,10 +17,10 @@ func _process(delta: float) -> void:
 	pass
 	
 func _jumpscare():
-
 	if globals.codi_jumpscare == true:
 		if !is_playing:
-			scream.play()
+			scream.pitch_scale = 1
+			scream.play(0.2)
 		is_playing = true
 		thrityninescary.hide()
 		blandtscary.hide()
@@ -32,6 +32,7 @@ func _jumpscare():
 		get_tree().change_scene_to_file("res://YOUWON.tscn")
 	elif globals.thritynine_jumpscare == true:
 		if !is_playing:
+			scream.pitch_scale = 0.875
 			scream.play()
 		is_playing = true
 		thrityninescary.show()
@@ -44,7 +45,8 @@ func _jumpscare():
 		get_tree().change_scene_to_file("res://YOUWON.tscn")
 	elif globals.blandt_jumpscare == true:
 		if !is_playing:
-			scream.play()
+			scream.pitch_scale = 1
+			scream.play(0.2)
 		is_playing = true
 		print("blandtaiaiaiaiaiaiaiaaaiaii")
 		blandtscary.show()
@@ -56,6 +58,13 @@ func _jumpscare():
 		await get_tree().create_timer(8.0).timeout
 		get_tree().change_scene_to_file("res://YOUWON.tscn")
 	elif globals.petar_jumpscare == true:
+		if !is_playing:
+			scream.pitch_scale = 0.875
+			scream.play(0.2)
+		is_playing = true
+		
+		await get_tree().create_timer(8.0).timeout
+		get_tree().change_scene_to_file("res://YOUWON.tscn")
 		blandtscary.hide()
 		codiscary.hide()
 		thrityninescary.hide()
@@ -65,6 +74,10 @@ func _jumpscare():
 		await get_tree().create_timer(8.0).timeout
 		get_tree().change_scene_to_file("res://YOUWON.tscn")
 	elif globals.highdrough_jumpscare == true:
+		if !is_playing:
+			scream.pitch_scale = 1.5
+			scream.play(0.2)
+		is_playing = true
 		blandtscary.hide()
 		codiscary.hide()
 		thrityninescary.hide()
@@ -73,4 +86,3 @@ func _jumpscare():
 		globals.highdrough_jumpscare = false
 		await get_tree().create_timer(8.0).timeout
 		get_tree().change_scene_to_file("res://YOUWON.tscn")
- 	

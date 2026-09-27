@@ -14,7 +14,13 @@
 [ext_resource type="Texture2D" uid="uid://cd2m58slop8y0" path="res://ui_elements/graphics/door_left.png" id="7_mfdlj"]
 [ext_resource type="Texture2D" uid="uid://cbjwwuq3txnh2" path="res://ui_elements/graphics/door_right.png" id="8_712jp"]
 [ext_resource type="Texture2D" uid="uid://qrhmynu222f3" path="res://resources/images/hallwayleft.jpg" id="11_p76y2"]
+[ext_resource type="AudioStream" uid="uid://djmp68yfeph45" path="res://resources/music/basic.mp3" id="10_p76y2"]
+[ext_resource type="AudioStream" uid="uid://p0tbsyuk1ee0" path="res://resources/music/doors_close.mp3" id="11_ycnno"]
 [ext_resource type="AudioStream" uid="uid://c575k4u3i5ji0" path="res://resources/music/play_area.ogg" id="12_p76y2"]
+[ext_resource type="AudioStream" uid="uid://dsj1esuadqsus" path="res://resources/music/doors_open.mp3" id="12_u3lqx"]
+[ext_resource type="AudioStream" uid="uid://clmsdgdvnq27c" path="res://resources/music/lights.mp3" id="13_5hwou"]
+[ext_resource type="AudioStream" uid="uid://dk145ol5u0y34" path="res://resources/music/kitchen.mp3" id="16_kcfs0"]
+[ext_resource type="AudioStream" uid="uid://ih5lxk6q0f1p" path="res://resources/music/office.mp3" id="17_ho1b8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4qxub"]
 size = Vector2(609, 39.75)
@@ -86,13 +92,27 @@ offset_right = 309.0
 offset_bottom = 405.0
 text = "lights"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="office" unique_id=1139607450]
+[node name="bg" type="AudioStreamPlayer" parent="office" unique_id=1139607450]
+stream = ExtResource("10_p76y2")
+autoplay = true
+
+[node name="door_close" type="AudioStreamPlayer" parent="office" unique_id=1220376513]
+stream = ExtResource("11_ycnno")
+
+[node name="door_open" type="AudioStreamPlayer" parent="office" unique_id=1816165530]
+stream = ExtResource("12_u3lqx")
+
+[node name="lights" type="AudioStreamPlayer" parent="office" unique_id=546496061]
+stream = ExtResource("13_5hwou")
 
 [node name="cams" parent="." unique_id=1866859984 instance=ExtResource("1_4qxub")]
 visible = false
 light_mask = 2
 visibility_layer = 2
 z_index = 1
+
+[node name="blandt" parent="cams/animtronic_ais" parent_id_path=PackedInt32Array(1866859984, 1778574866) index="4" unique_id=1522828863 node_paths=PackedStringArray("office")]
+office = NodePath("../../../office/Area2D")
 
 [node name="Codi" parent="cams/storage_room" parent_id_path=PackedInt32Array(1866859984, 424177924) index="1" unique_id=733439042]
 position = Vector2(640.00006, 466.65128)
@@ -115,6 +135,10 @@ texture = ExtResource("11_p76y2")
 stream = ExtResource("12_p76y2")
 
 [node name="Soundtrack_kitchen" type="AudioStreamPlayer" parent="cams" unique_id=105600181]
+stream = ExtResource("16_kcfs0")
+
+[node name="Soundtrack_base" type="AudioStreamPlayer" parent="cams" unique_id=1456700925]
+stream = ExtResource("17_ho1b8")
 
 [node name="Label" type="Label" parent="." unique_id=1942648176]
 offset_left = 1008.0
@@ -143,7 +167,11 @@ position = Vector2(17, 480)
 [connection signal="pressed" from="office/doorleft" to="office/Area2D" method="_on_doorleft_pressed"]
 [connection signal="pressed" from="office/doorright" to="office/Area2D" method="_on_doorright_pressed"]
 [connection signal="button_down" from="office/Button" to="office/Area2D" method="_on_button_button_down"]
+[connection signal="finished" from="office/bg" to="office" method="_on_bg_finished"]
 [connection signal="visibility_changed" from="cams" to="." method="_on_cams_visibility_changed"]
+[connection signal="finished" from="cams/Soundtrack_Play_area" to="cams" method="_on_soundtrack_play_area_finished"]
+[connection signal="finished" from="cams/Soundtrack_kitchen" to="cams" method="_on_soundtrack_kitchen_finished"]
+[connection signal="finished" from="cams/Soundtrack_base" to="cams" method="_on_soundtrack_base_finished"]
 
 [editable path="cams"]
 [editable path="cams/storage_room/recharge_crank"]

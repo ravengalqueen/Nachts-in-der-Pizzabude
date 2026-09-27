@@ -1,21 +1,22 @@
 [gd_scene format=3 uid="uid://t5jf4q36537w"]
 
-[ext_resource type="Texture2D" uid="uid://cd4yfy6kqsvdj" path="res://icon.svg" id="1_1qlp0"]
+[ext_resource type="Texture2D" uid="uid://c6c2nki67nuhu" path="res://ui_elements/graphics/pizza base.png" id="1_0i3vg"]
 [ext_resource type="Script" uid="uid://cm3m7b4f4mj6f" path="res://minigames/knob.gd" id="1_qaulb"]
+[ext_resource type="Texture2D" uid="uid://by44fsfqrc2ae" path="res://ui_elements/graphics/Screenshot 2026-09-27 at 12-05-03 pixil-frame-0_1.png (WEBP-Grafik 100 × 100 Pixel).png" id="2_y0gmx"]
 
 [node name="recharge_crank" type="Node2D" unique_id=761692067]
 position = Vector2(85.99999, 97.99999)
 scale = Vector2(0.79999995, 0.8)
 
 [node name="base" type="Sprite2D" parent="." unique_id=32295677]
-position = Vector2(434.34506, 486.875)
-scale = Vector2(1.9828906, 1.9042969)
-texture = ExtResource("1_1qlp0")
+position = Vector2(443.9572, 474.19678)
+scale = Vector2(2.1366851, 2.1071482)
+texture = ExtResource("1_0i3vg")
 
 [node name="knob" type="Sprite2D" parent="." unique_id=277386202]
-position = Vector2(531.25, 412.5)
-scale = Vector2(0.7558596, 0.93554735)
-texture = ExtResource("1_1qlp0")
+position = Vector2(532.50006, 393.75003)
+scale = Vector2(1.954018, 2.4915817)
+texture = ExtResource("2_y0gmx")
 script = ExtResource("1_qaulb")
 
 [node name="Button" type="Button" parent="knob" unique_id=661262444]

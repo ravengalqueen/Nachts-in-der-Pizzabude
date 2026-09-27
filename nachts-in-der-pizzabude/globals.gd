@@ -10,6 +10,7 @@ var door_right_open = true
 var percent = 0.005
 
 
+
 # camera positions
 #1: stage, 2: main area, 3: storage room, 4: play area, 5: kitchen, 6: hallway 1, 7: hallway 2
 var camera_position = 0

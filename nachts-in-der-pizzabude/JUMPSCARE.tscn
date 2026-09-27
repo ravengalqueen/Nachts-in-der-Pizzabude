@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://qdq3wgf2gcg3" path="res://resources/images/blandt_jumpscare.png" id="4_v3xeu"]
 [ext_resource type="AudioStream" uid="uid://cvov46ialpqro" path="res://resources/music/jumpscare.mp3" id="5_mpnak"]
 
-[node name="Node2D" type="Node2D" unique_id=182236669]
+[node name="Node2D2" type="Node2D" unique_id=182236669]
 
 [node name="Area2D" type="Area2D" parent="." unique_id=244282007]
 script = ExtResource("1_6hf43")
