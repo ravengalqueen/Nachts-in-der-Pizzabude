@@ -22,6 +22,7 @@ func remove():
 	gone = true
 	vis = false
 	self.hide()
+	
 func make_visible():
 	print("blandt is visible")
 	vis = true
