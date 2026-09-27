@@ -42,6 +42,7 @@ scale = Vector2(1.057, 0.791)
 texture = ExtResource("4_mfdlj")
 
 [node name="petar" type="Sprite2D" parent="office" unique_id=135215111]
+visible = false
 position = Vector2(25.537598, 462.18427)
 scale = Vector2(0.21085958, 0.5471074)
 texture = ExtResource("5_fjwrv")
