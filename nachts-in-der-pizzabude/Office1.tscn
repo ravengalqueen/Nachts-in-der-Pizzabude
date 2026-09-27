@@ -25,7 +25,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4qxub"]
 size = Vector2(609, 39.75)
 
-[node name="Node2D2" type="Node2D" unique_id=177538174]
+[node name="Node2D4" type="Node2D" unique_id=177538174]
 script = ExtResource("1_tn3ur")
 
 [node name="office" type="Area2D" parent="." unique_id=169459903]
@@ -117,6 +117,9 @@ office = NodePath("../../../office/Area2D")
 position = Vector2(640.00006, 466.65128)
 scale = Vector2(0.474934, 0.37188068)
 texture = ExtResource("3_sd5p1")
+
+[node name="recharge_crank" parent="cams/storage_room" parent_id_path=PackedInt32Array(1866859984, 424177924) index="3" unique_id=761692067]
+z_index = 99
 
 [node name="play_area_image" parent="cams/play_area" parent_id_path=PackedInt32Array(1866859984, 1166466235) index="0" unique_id=1699671702]
 position = Vector2(576, 323.99997)

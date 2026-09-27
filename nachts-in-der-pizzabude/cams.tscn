@@ -115,6 +115,11 @@ scale = Vector2(0.5549645, 0.62471783)
 texture = ExtResource("10_d654q")
 
 [node name="recharge_crank" parent="storage_room" unique_id=761692067 instance=ExtResource("13_rukh5")]
+top_level = true
+light_mask = 2
+visibility_layer = 2
+z_index = 99
+z_as_relative = false
 position = Vector2(-113.99997, 64.00003)
 
 [node name="base" parent="storage_room/recharge_crank" index="0" unique_id=32295677]
@@ -122,11 +127,15 @@ position = Vector2(406.24997, 376.24997)
 scale = Vector2(1.7485151, 1.855469)
 
 [node name="knob" parent="storage_room/recharge_crank" index="1" unique_id=277386202]
-position = Vector2(487.5, 291.24997)
+position = Vector2(470, 294.99997)
 
 [node name="Button" parent="storage_room/recharge_crank/knob" index="0" unique_id=661262444]
-offset_left = -30.645935
-offset_right = -150.64594
+anchor_right = 1.6819094
+anchor_bottom = 1.2298511
+offset_left = 9.499268
+offset_top = -12.220196
+offset_right = -27.808887
+offset_bottom = -15.793087
 
 [node name="play_area" type="Area2D" parent="." unique_id=1166466235]
 visible = false
