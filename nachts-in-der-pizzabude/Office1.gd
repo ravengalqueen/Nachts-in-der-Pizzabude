@@ -88,10 +88,12 @@ func _on_doorleft_pressed() -> void:
 	if globals.door_left_open == true:
 		globals.door_left_open = false
 		globals.percent += 0.005
+		$"../door_open".play()
 		door_left.show()
 	elif globals.door_left_open == false:
 		globals.percent -= 0.005
 		globals.door_left_open = true
+		$"../door_close".play()
 		door_left.hide()
 
 
@@ -99,10 +101,12 @@ func _on_doorright_pressed() -> void:
 	if globals.door_right_open == true:
 		globals.door_right_open = false
 		globals.percent += 0.005
+		$"../door_open".play()
 		door_right.show()
 	elif globals.door_right_open == false:
 		globals.percent -= 0.005
 		globals.door_right_open = true
+		$"../door_close".play()
 		door_right.hide()
 
 
@@ -120,6 +124,7 @@ func _noenergy():
 
 
 func _on_button_button_down() -> void:
+	$"../lights".play()
 	if lights_off.is_visible_in_tree():
 		lights_off.hide()
 		globals.percent += 0.005

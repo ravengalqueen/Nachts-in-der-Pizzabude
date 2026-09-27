@@ -34,9 +34,11 @@ func _ready() -> void:
 	
 	$Soundtrack_Play_area.play()
 	$Soundtrack_kitchen.play()
+	$Soundtrack_base.play()
 	
 	$Soundtrack_Play_area.volume_db = -80
-	$Soundtrack_kitchen.volume_db = -35
+	$Soundtrack_kitchen.volume_db = -80
+	$Soundtrack_base.volume_db = -80
 	
 	stage = $stage
 	tn_stage = $"stage/39"
@@ -89,6 +91,7 @@ func _process(delta: float) -> void:
 func _on_cam_stage_button_down() -> void:
 	_hide_cams()
 	_mute_soundtracks()
+	$Soundtrack_base.volume_db = -20
 	if globals.thritynine_waiting == true:
 		tn_stage.show()
 	else:
@@ -108,6 +111,7 @@ func _on_cam_stage_button_down() -> void:
 func _on_cam_main_button_down() -> void:
 	_hide_cams()
 	_mute_soundtracks()
+	$Soundtrack_base.volume_db = -20
 	if globals.codi_position == 2: 
 		c_main.show()
 	else:
@@ -138,11 +142,10 @@ func _on_cam_storage_button_down() -> void:
 	storage.show()
 	globals.camera_position = 3
 
-
 func _on_cam_play_button_down() -> void:
 	_hide_cams()
 	_mute_soundtracks()
-	$Soundtrack_Play_area.volume_db = -35
+	$Soundtrack_Play_area.volume_db = -20
 	if globals.highdrough_pos == 0: 
 		h_play.show()
 	else:
@@ -163,6 +166,7 @@ func _on_cam_play_button_down() -> void:
 func _on_cam_kitchen_button_down() -> void:
 	_hide_cams()
 	_mute_soundtracks()
+	$"Soundtrack_kitchen".volume_db = -20
 	if globals.codi_position == 5: 
 		c_kitchen.show()
 	else:
@@ -175,6 +179,7 @@ func _on_cam_kitchen_button_down() -> void:
 func _on_cam_hall_1_button_down() -> void:
 	_hide_cams()
 	_mute_soundtracks()
+	$Soundtrack_base.volume_db = -20
 	if globals.codi_position == 6:
 		c_hallone.show()
 	else:
@@ -194,6 +199,7 @@ func _on_cam_hall_1_button_down() -> void:
 func _on_cam_hall_2_button_down() -> void:
 	_hide_cams()
 	_mute_soundtracks()
+	$Soundtrack_base.volume_db = -20
 	if globals.codi_position == 7: 
 		c_halltwo.show()
 	else: 
@@ -212,7 +218,7 @@ func _hide_cams():
 func _mute_soundtracks():
 	$Soundtrack_kitchen.volume_db = -80
 	$Soundtrack_Play_area.volume_db = -80
-
+	$Soundtrack_base.volume_db =-80
 func _on_call_button_button_down() -> void:
 	globals.highdrough_called = true
 	print("highdrough; called")
@@ -223,3 +229,15 @@ func _on_call_button_button_up() -> void:
 	print("highdrough; not called")
 	
 #petar in storage room
+
+
+func _on_soundtrack_play_area_finished() -> void:
+	$"Soundtrack_Play_area".play()
+
+
+func _on_soundtrack_kitchen_finished() -> void:
+	$"Soundtrack_kitchen".play()
+
+
+func _on_soundtrack_base_finished() -> void:
+	$"Soundtrack_base".play()

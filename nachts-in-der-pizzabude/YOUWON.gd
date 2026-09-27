@@ -6,7 +6,10 @@ func _ready() -> void:
 	if globals.win == true:
 		$"../YOUWON".show()
 		globals.win = false
+		globals.energy = 100.0
 	elif globals.win == false:
+		$"../nextnight".hide()
+		$"../nextnight".disabled = true
 		$"../YOULOSE".show()
 		
 
