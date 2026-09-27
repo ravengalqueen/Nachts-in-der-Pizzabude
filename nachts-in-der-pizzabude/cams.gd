@@ -27,6 +27,7 @@ var cam_play
 var cam_kitchen
 var cam_hallone
 var cam_halltwo
+var call_button_label
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	
@@ -72,6 +73,7 @@ func _ready() -> void:
 	cam_kitchen = $cam_map/cam_kitchen
 	cam_hallone = $cam_map/cam_hall1
 	cam_halltwo = $cam_map/cam_hall2
+	call_button_label = $play_area/Label
 	_on_cam_stage_button_down()
 	
 	
@@ -115,7 +117,7 @@ func _on_cam_main_button_down() -> void:
 	if globals.highdrough_pos == 1:
 		h_main.show()
 	else: 
-		h_main.show()
+		h_main.hide()
 	main.show()
 	globals.camera_position = 2
 
@@ -143,6 +145,10 @@ func _on_cam_play_button_down() -> void:
 		c_play.show()
 	else: 
 		c_play.hide()
+	if globals.night == 3 and globals.hours == 0:
+		call_button_label.show()
+	else:
+		call_button_label.hide()
 	play.show()
 	globals.camera_position = 4
 
@@ -209,3 +215,5 @@ func _on_call_button_button_down() -> void:
 func _on_call_button_button_up() -> void:
 	globals.highdrough_called = false
 	print("highdrough; not called")
+	
+#petar in storage room
