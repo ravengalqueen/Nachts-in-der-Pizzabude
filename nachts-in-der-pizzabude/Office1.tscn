@@ -8,12 +8,12 @@
 [ext_resource type="Texture2D" uid="uid://dfrnueaux5e16" path="res://ui_elements/graphics/office_lights_on.png" id="3_ytuxu"]
 [ext_resource type="Texture2D" uid="uid://bl80msrcflkw" path="res://ui_elements/graphics/office_lights_off.png" id="4_mfdlj"]
 [ext_resource type="PackedScene" uid="uid://bdw4plf3lptl5" path="res://ui_elements/energy_level.tscn" id="5_7mdc4"]
+[ext_resource type="Texture2D" uid="uid://dmdkw23144iwf" path="res://ui_elements/graphics/petar.png" id="5_fjwrv"]
 [ext_resource type="Texture2D" uid="uid://cd4yfy6kqsvdj" path="res://icon.svg" id="6_712jp"]
 [ext_resource type="Script" uid="uid://cvu5mf71brwn" path="res://clock.gd" id="6_31274"]
 [ext_resource type="PackedScene" uid="uid://b7yxn4cogjrd" path="res://animatronics/blandt.tscn" id="6_ri6db"]
 [ext_resource type="Texture2D" uid="uid://cd2m58slop8y0" path="res://ui_elements/graphics/door_left.png" id="7_mfdlj"]
 [ext_resource type="Texture2D" uid="uid://cbjwwuq3txnh2" path="res://ui_elements/graphics/door_right.png" id="8_712jp"]
-[ext_resource type="Texture2D" uid="uid://qrhmynu222f3" path="res://resources/images/hallwayleft.jpg" id="11_p76y2"]
 [ext_resource type="AudioStream" uid="uid://djmp68yfeph45" path="res://resources/music/basic.mp3" id="10_p76y2"]
 [ext_resource type="AudioStream" uid="uid://p0tbsyuk1ee0" path="res://resources/music/doors_close.mp3" id="11_ycnno"]
 [ext_resource type="AudioStream" uid="uid://c575k4u3i5ji0" path="res://resources/music/play_area.ogg" id="12_p76y2"]
@@ -42,10 +42,9 @@ scale = Vector2(1.057, 0.791)
 texture = ExtResource("4_mfdlj")
 
 [node name="petar" type="Sprite2D" parent="office" unique_id=135215111]
-visible = false
-position = Vector2(69.49999, 460.5)
-scale = Vector2(0.3667546, 0.5547113)
-texture = ExtResource("3_sd5p1")
+position = Vector2(25.537598, 462.18427)
+scale = Vector2(0.21085958, 0.5471074)
+texture = ExtResource("5_fjwrv")
 
 [node name="highdrough" type="Sprite2D" parent="office" unique_id=1323181448]
 visible = false
@@ -128,9 +127,6 @@ visible = true
 position = Vector2(681.45917, 444)
 scale = Vector2(0.7670233, 0.5248829)
 
-[node name="hallway_left_image" parent="cams/hallway_left" parent_id_path=PackedInt32Array(1866859984, 686455424) index="0" unique_id=384055304]
-texture = ExtResource("11_p76y2")
-
 [node name="Soundtrack_Play_area" type="AudioStreamPlayer" parent="cams" unique_id=976819452]
 stream = ExtResource("12_p76y2")
 
@@ -161,7 +157,7 @@ z_index = 1
 position = Vector2(92, 64)
 
 [node name="Blandt" parent="." unique_id=1896544380 instance=ExtResource("6_ri6db")]
-position = Vector2(17, 480)
+position = Vector2(-149, 562)
 
 [connection signal="mouse_entered" from="office/Area2D" to="office/Area2D" method="_on_mouse_entered"]
 [connection signal="pressed" from="office/doorleft" to="office/Area2D" method="_on_doorleft_pressed"]
