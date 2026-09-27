@@ -28,4 +28,5 @@ texture = ExtResource("4_v3xeu")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1937923469]
 stream = ExtResource("5_mpnak")
-pitch_scale = 1.56
+
+[connection signal="finished" from="AudioStreamPlayer" to="Area2D" method="_on_audio_stream_player_finished"]

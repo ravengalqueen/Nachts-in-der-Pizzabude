@@ -16,6 +16,9 @@ func _process(delta: float) -> void:
 func _jumpscare():
 
 	if globals.codi_jumpscare == true:
+		if !is_playing:
+			scream.play()
+		is_playing = true
 		thrityninescary.hide()
 		blandtscary.hide()
 		codiscary.show()
@@ -23,16 +26,18 @@ func _jumpscare():
 		globals.codi_jumpscare = false
 		get_tree().change_scene_to_file("res://YOUWON.tscn")
 	elif globals.thritynine_jumpscare == true:
+		if !is_playing:
+			scream.play()
+		is_playing = true
 		thrityninescary.show()
 		codiscary.hide()
 		blandtscary.hide()
-<<<<<<< HEAD
-
-=======
 		await get_tree().create_timer(8.0).timeout
 		get_tree().change_scene_to_file("res://YOUWON.tscn")
->>>>>>> 271926295b36096498575767d28ced806fecf04e
 	elif globals.blandt_jumpscare == true:
+		if !is_playing:
+			scream.play()
+		is_playing = true
 		print("blandtaiaiaiaiaiaiaiaaaiaii")
 		blandtscary.show()
 		codiscary.hide()
@@ -40,11 +45,16 @@ func _jumpscare():
 		await get_tree().create_timer(8.0).timeout
 		get_tree().change_scene_to_file("res://YOUWON.tscn")
 	elif globals.petar_jumpscare == true:
+		if !is_playing:
+			scream.play()
+		is_playing = true
+		
 		await get_tree().create_timer(8.0).timeout
 		get_tree().change_scene_to_file("res://YOUWON.tscn")
 		
-	if !is_playing:
-		scream.play()
+
+	
+
+
+func _on_audio_stream_player_finished() -> void:
 	is_playing = true
-	
-	
