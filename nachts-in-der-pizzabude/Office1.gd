@@ -3,6 +3,13 @@ extends Area2D
 var cams
 @onready var doorleft = $"../doorleft"
 @onready var doorright = $"../doorright"
+
+
+var blandt
+# Called when the node enters the scene tree for the first time.
+
+
+
 @onready var lights_on = $"../OfficeLightsOn"
 @onready var lights_off = $"../OfficeLightsOff"
 @onready var p_office = $"../petar"
@@ -11,6 +18,7 @@ var cams
 @onready var door_right = $"../DoorRight"
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	blandt = $"../../Blandt"
 	cams = $"../../cams"
 	cams.hide()
 	_Nighttimer()
@@ -29,11 +37,18 @@ func _on_mouse_entered():
 		globals.percent -= 0.005
 		doorleft.show()
 		doorright.show()
+		if blandt == null:
+			return
+		blandt.make_visible()
 	else:
 		cams.show()
 		globals.percent += 0.005
 		doorleft.hide()
 		doorright.hide()
+		if blandt == null:
+			return
+		blandt.make_invisible()
+	print("harhar")
 	
 
 func _loser():
@@ -55,8 +70,15 @@ func _loser():
 		
 func _Nighttimer():
 	while true:
-		await get_tree().create_timer(90.0).timeout
+		await get_tree().create_timer(10.0).timeout
 		globals.hours += 1 
+		print("an hour has passed")
+		if randi_range(1,1) == 1:
+			print("spawn blandt")
+			if blandt == null:
+					return
+			blandt.spawn()
+			blandt.make_visible()
 		if globals.hours == 6:
 			globals.win = true
 			get_tree().change_scene_to_file("res://YOUWON.tscn")

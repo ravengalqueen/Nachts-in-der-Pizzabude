@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cssyx1dxd46of" path="res://Nightselect.gd" id="1_pd2aj"]
 
-[node name="Node2D" type="Node2D" unique_id=2079392514]
+[node name="Node2D2" type="Node2D" unique_id=2079392514]
 
 [node name="Area2D" type="Area2D" parent="." unique_id=2030700310]
 script = ExtResource("1_pd2aj")
