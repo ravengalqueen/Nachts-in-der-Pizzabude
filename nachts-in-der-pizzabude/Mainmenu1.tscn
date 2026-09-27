@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://wrvucsfj5b4p"]
 
 [ext_resource type="Script" uid="uid://6qxnli5avrly" path="res://Mainmenu.gd" id="1_dm1nb"]
+[ext_resource type="Texture2D" uid="uid://ctmkaoa6cs21n" path="res://resources/images/Startscreen1.jpg" id="2_llues"]
 
 [node name="Node2D2" type="Node2D" unique_id=726188559]
 
@@ -9,30 +10,37 @@ script = ExtResource("1_dm1nb")
 
 [node name="startgamebutt" type="Button" parent="." unique_id=907306705]
 offset_left = 38.0
-offset_top = 216.0
-offset_right = 148.0
-offset_bottom = 262.0
+offset_top = 296.0
+offset_right = 246.0
+offset_bottom = 359.0
 
 [node name="Nightsbutt" type="Button" parent="." unique_id=378813150]
 offset_left = 36.0
-offset_top = 297.0
-offset_right = 158.0
-offset_bottom = 343.0
+offset_top = 369.0
+offset_right = 439.0
+offset_bottom = 435.0
 
 [node name="Label2" type="Label" parent="Nightsbutt" unique_id=183696419]
 layout_mode = 0
-offset_left = 27.0
-offset_top = 10.0
-offset_right = 116.0
-offset_bottom = 42.0
+offset_left = -2.0
+offset_top = 65.0
+offset_right = 401.0
+offset_bottom = 140.0
 text = "Nights"
 
 [node name="Label" type="Label" parent="." unique_id=377917813]
-offset_left = 51.0
-offset_top = 221.0
-offset_right = 150.0
-offset_bottom = 264.0
+offset_left = 32.0
+offset_top = 364.0
+offset_right = 193.0
+offset_bottom = 422.0
 text = "Start Game"
+
+[node name="Startscreen1" type="Sprite2D" parent="." unique_id=874596186]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(574, 332)
+scale = Vector2(0.5629883, 0.41992188)
+texture = ExtResource("2_llues")
 
 [connection signal="button_down" from="startgamebutt" to="Area2D" method="_on_startgamebutt_button_down"]
 [connection signal="button_down" from="Nightsbutt" to="Area2D" method="_on_nightsbutt_button_down"]
