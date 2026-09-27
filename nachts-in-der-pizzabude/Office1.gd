@@ -34,6 +34,7 @@ func _process(delta: float) -> void:
 func _on_mouse_entered():
 	if cams.visible:
 		cams.hide()
+		cams._mute_soundtracks()
 		globals.percent -= 0.005
 		doorleft.show()
 		doorright.show()
@@ -75,7 +76,6 @@ func _Nighttimer():
 			if blandt == null:
 					return
 			blandt.spawn()
-			blandt.make_visible()
 		if globals.hours == 6:
 			globals.win = true
 			get_tree().change_scene_to_file("res://YOUWON.tscn")

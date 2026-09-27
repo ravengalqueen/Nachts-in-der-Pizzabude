@@ -94,7 +94,6 @@ scale = Vector2(0.7227746, 0.75072837)
 texture = ExtResource("12_m11gb")
 
 [node name="storage_room" type="Area2D" parent="." unique_id=424177924]
-visible = false
 
 [node name="storage_room_image" type="Sprite2D" parent="storage_room" unique_id=68128961]
 position = Vector2(577, 325.49997)
@@ -106,6 +105,11 @@ visible = false
 position = Vector2(667.00006, 411.99997)
 scale = Vector2(0.77727515, 0.75500005)
 texture = ExtResource("11_yfh2k")
+
+[node name="Petar" type="Sprite2D" parent="storage_room" unique_id=1975551119]
+position = Vector2(413, 529)
+scale = Vector2(0.5549645, 0.62471783)
+texture = ExtResource("10_d654q")
 
 [node name="recharge_crank" parent="storage_room" unique_id=761692067 instance=ExtResource("13_rukh5")]
 position = Vector2(-113.99997, 64.00003)

@@ -16,15 +16,19 @@ func spawn():
 	gone = false
 	print("blandt has spawned")
 	self.show()
-	await get_tree().create_timer(4.5).timeout
-	if vis == true && gone == false:
-		globals.blandt_jumpscare = true
+	self.make_visible()
+
 func remove():
 	gone = true
+	vis = false
 	self.hide()
+	
 func make_visible():
 	print("blandt is visible")
 	vis = true
+	await get_tree().create_timer(4.5).timeout
+	if vis == true && gone == false:
+		globals.blandt_jumpscare = true
 
 func make_invisible():
 	vis = false
