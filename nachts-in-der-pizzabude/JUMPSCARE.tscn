@@ -14,11 +14,13 @@
 script = ExtResource("1_6hf43")
 
 [node name="Highdrough" type="Sprite2D" parent="Area2D" unique_id=1237638505]
+visible = false
 position = Vector2(313, 277)
 scale = Vector2(3.0520833, 2.0116525)
 texture = ExtResource("2_mystk")
 
 [node name="Petar" type="Sprite2D" parent="Area2D" unique_id=925059885]
+visible = false
 position = Vector2(606.00006, 366)
 scale = Vector2(1.8506205, 1.8394469)
 texture = ExtResource("3_gx7xh")
@@ -29,11 +31,13 @@ scale = Vector2(3.3966346, 2.7479167)
 texture = ExtResource("2_pmq77")
 
 [node name="39(2)" type="Sprite2D" parent="Area2D" unique_id=178198448]
+visible = false
 position = Vector2(549, 493)
 scale = Vector2(2.3662791, 1.7934783)
 texture = ExtResource("3_v3xeu")
 
 [node name="blandtscary" type="Sprite2D" parent="Area2D" unique_id=433209146]
+visible = false
 position = Vector2(588, 454.00006)
 scale = Vector2(1.5637021, 1.7520324)
 texture = ExtResource("4_v3xeu")

@@ -102,7 +102,7 @@ texture = ExtResource("12_yfh2k")
 
 [node name="Codi" type="Sprite2D" parent="storage_room" unique_id=733439042]
 visible = false
-position = Vector2(667.00006, 411.99997)
+position = Vector2(730, 411.99997)
 scale = Vector2(0.77727515, 0.75500005)
 texture = ExtResource("11_yfh2k")
 
