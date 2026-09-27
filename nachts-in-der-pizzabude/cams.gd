@@ -9,6 +9,7 @@ var p_main
 var h_main
 var storage
 var c_storage
+var p_storage
 var play
 var h_play
 var c_play
@@ -49,6 +50,7 @@ func _ready() -> void:
 	
 	storage = $storage_room
 	c_storage = $storage_room/Codi
+	p_storage = $storage_room/Petar
 	
 	play = $play_area
 	h_play = $play_area/highdrough
@@ -129,6 +131,10 @@ func _on_cam_storage_button_down() -> void:
 		c_storage.show()
 	else:
 		c_storage.hide()
+	if globals.petar_position == 2:
+		p_storage.show()
+	else:
+		p_storage.hide()
 	storage.show()
 	globals.camera_position = 3
 
