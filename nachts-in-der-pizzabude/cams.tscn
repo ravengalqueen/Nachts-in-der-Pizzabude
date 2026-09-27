@@ -13,11 +13,14 @@
 [ext_resource type="Texture2D" uid="uid://dmdkw23144iwf" path="res://ui_elements/graphics/petar.png" id="10_d654q"]
 [ext_resource type="Texture2D" uid="uid://b3jsj34224w5x" path="res://ui_elements/graphics/codi_raw-removebg-preview.png" id="11_yfh2k"]
 [ext_resource type="Texture2D" uid="uid://pmvgfhev540x" path="res://ui_elements/graphics/highdrough.png" id="12_m11gb"]
+[ext_resource type="Texture2D" uid="uid://dus0js06i5ms0" path="res://resources/images/mainarea.jpg" id="12_wjbk4"]
 [ext_resource type="Texture2D" uid="uid://np3otl1sp1gl" path="res://ui_elements/graphics/storage.png" id="12_yfh2k"]
 [ext_resource type="PackedScene" uid="uid://t5jf4q36537w" path="res://minigames/recharge_lever.tscn" id="13_rukh5"]
 [ext_resource type="Texture2D" uid="uid://b77d2oxlsyji3" path="res://ui_elements/graphics/playroom_unfinished.png" id="14_3fd42"]
 [ext_resource type="Texture2D" uid="uid://b8yl2u2jkbl7e" path="res://ui_elements/graphics/button_highdrough;.png" id="15_3vh7m"]
 [ext_resource type="Texture2D" uid="uid://ch3hcr3san6qo" path="res://ui_elements/graphics/kitchen7.png" id="17_d654q"]
+[ext_resource type="Texture2D" uid="uid://qrhmynu222f3" path="res://resources/images/hallwayleft.jpg" id="19_vhund"]
+[ext_resource type="Texture2D" uid="uid://cei23od1av8s3" path="res://resources/images/hallwayright.jpg" id="20_7o50l"]
 
 [node name="Node2D" type="Node2D" unique_id=1866859984]
 script = ExtResource("1_15y2n")
@@ -72,8 +75,8 @@ visible = false
 
 [node name="main_area_image" type="Sprite2D" parent="main_area" unique_id=1218684213]
 position = Vector2(576.5, 320.5)
-scale = Vector2(9.0390625, 5.0703125)
-texture = ExtResource("3_7ppic")
+scale = Vector2(0.75, 0.421)
+texture = ExtResource("12_wjbk4")
 
 [node name="CodiRaw" type="Sprite2D" parent="main_area" unique_id=694024715]
 visible = false
@@ -97,7 +100,7 @@ texture = ExtResource("12_m11gb")
 
 [node name="storage_room_image" type="Sprite2D" parent="storage_room" unique_id=68128961]
 position = Vector2(577, 325.49997)
-scale = Vector2(0.95065784, 0.7064622)
+scale = Vector2(0.951, 0.704)
 texture = ExtResource("12_yfh2k")
 
 [node name="Codi" type="Sprite2D" parent="storage_room" unique_id=733439042]
@@ -130,7 +133,7 @@ visible = false
 
 [node name="play_area_image" type="Sprite2D" parent="play_area" unique_id=1699671702]
 position = Vector2(577, 325)
-scale = Vector2(1.0501367, 0.78250307)
+scale = Vector2(0.944, 0.704)
 texture = ExtResource("14_3fd42")
 
 [node name="highdrough" type="Sprite2D" parent="play_area" unique_id=1249861079]
@@ -186,8 +189,9 @@ visible = false
 
 [node name="hallway_left_image" type="Sprite2D" parent="hallway_left" unique_id=384055304]
 position = Vector2(576.5, 327.5)
-scale = Vector2(8.9296875, 4.8671875)
-texture = ExtResource("3_7ppic")
+scale = Vector2(0.6, 0.6)
+skew = 0.012217305
+texture = ExtResource("19_vhund")
 
 [node name="petar" type="Sprite2D" parent="hallway_left" unique_id=138857744]
 visible = false
@@ -211,8 +215,8 @@ visible = false
 
 [node name="hallway_right_image" type="Sprite2D" parent="hallway_right" unique_id=1553318008]
 position = Vector2(579.50006, 320)
-scale = Vector2(8.9609375, 5.0625)
-texture = ExtResource("3_7ppic")
+scale = Vector2(0.8, 0.452)
+texture = ExtResource("20_7o50l")
 
 [node name="codi" type="Sprite2D" parent="hallway_right" unique_id=415296256]
 visible = false

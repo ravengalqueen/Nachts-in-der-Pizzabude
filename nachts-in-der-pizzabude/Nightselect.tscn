@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://wpldbg1i61x1"]
 
 [ext_resource type="Script" uid="uid://cssyx1dxd46of" path="res://Nightselect.gd" id="1_pd2aj"]
+[ext_resource type="Texture2D" uid="uid://b2eepr0mchl2g" path="res://resources/images/Levelselect.jpg" id="2_gp4jw"]
 
 [node name="Node2D2" type="Node2D" unique_id=2079392514]
 
@@ -8,56 +9,56 @@
 script = ExtResource("1_pd2aj")
 
 [node name="night1" type="Button" parent="." unique_id=1793774981]
-offset_left = 204.0
-offset_top = 90.0
+offset_left = 5.0
+offset_top = 5.0
 offset_right = 354.0
-offset_bottom = 170.0
+offset_bottom = 102.0
 offset_transform_enabled = true
 
 [node name="night2" type="Button" parent="." unique_id=1912356538]
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 0.27
-offset_left = 520.0
-offset_top = 90.0
-offset_right = 670.0
-offset_bottom = 170.0
+offset_left = 484.0
+offset_top = 17.0
+offset_right = 827.0
+offset_bottom = 239.0
 
 [node name="night3" type="Button" parent="." unique_id=1904326103]
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 0.27
-offset_left = 847.0
-offset_top = 91.0
-offset_right = 997.0
-offset_bottom = 171.0
+offset_left = 843.0
+offset_top = 174.0
+offset_right = 1151.0
+offset_bottom = 287.0
 
 [node name="night4" type="Button" parent="." unique_id=651332729]
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 0.27
-offset_left = 205.0
-offset_top = 400.0
-offset_right = 355.0
-offset_bottom = 480.0
+offset_left = 35.0
+offset_top = 361.0
+offset_right = 401.0
+offset_bottom = 632.0
 
 [node name="night5" type="Button" parent="." unique_id=1397910140]
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 0.27
-offset_left = 532.0
-offset_top = 401.0
-offset_right = 682.0
-offset_bottom = 481.0
+offset_left = 482.0
+offset_top = 492.0
+offset_right = 840.0
+offset_bottom = 639.0
 
 [node name="night6" type="Button" parent="." unique_id=159808203]
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 0.27
-offset_left = 852.0
-offset_top = 397.0
-offset_right = 1002.0
-offset_bottom = 477.0
+offset_left = 881.0
+offset_top = 337.0
+offset_right = 1147.0
+offset_bottom = 622.0
 
 [node name="Label" type="Label" parent="." unique_id=401136693]
 offset_left = 847.0
@@ -118,6 +119,11 @@ theme_override_font_sizes/font_size = 28
 text = "Night 2"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Levelselect" type="Sprite2D" parent="." unique_id=1912259886]
+position = Vector2(577.5, 322.00003)
+scale = Vector2(0.55908203, 0.42057294)
+texture = ExtResource("2_gp4jw")
 
 [connection signal="button_down" from="night1" to="Area2D" method="_on_night_1_button_down"]
 [connection signal="button_down" from="night2" to="Area2D" method="_on_night_2_button_down"]

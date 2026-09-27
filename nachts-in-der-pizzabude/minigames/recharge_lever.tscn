@@ -20,17 +20,19 @@ texture = ExtResource("2_y0gmx")
 script = ExtResource("1_qaulb")
 
 [node name="Button" type="Button" parent="knob" unique_id=661262444]
+z_index = 1
 anchors_preset = -1
-anchor_left = -0.27737427
-anchor_top = -0.43692887
-anchor_right = 1.6110306
-anchor_bottom = 1.477606
-offset_left = -25.684662
-offset_top = -8.206696
-offset_right = -145.68466
-offset_bottom = -128.2067
+anchor_left = -0.941466
+anchor_top = 0.12800452
+anchor_right = 1.0284542
+anchor_bottom = 1.3970809
+offset_left = 8.859563
+offset_top = -14.226968
+offset_right = -10.860282
+offset_bottom = -17.799858
 grow_horizontal = 2
 grow_vertical = 2
+flat = true
 metadata/_edit_use_anchors_ = true
 
 [connection signal="button_down" from="knob/Button" to="knob" method="_on_button_button_down"]
