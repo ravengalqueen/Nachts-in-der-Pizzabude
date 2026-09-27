@@ -4,6 +4,7 @@ extends Area2D
 @onready var blandtscary = $"blandtscary"
 @onready var scream = $"../AudioStreamPlayer"
 var is_playing = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	_jumpscare()
@@ -14,11 +15,7 @@ func _process(delta: float) -> void:
 	pass
 	
 func _jumpscare():
-
 	if globals.codi_jumpscare == true:
-		if !is_playing:
-			scream.play()
-		is_playing = true
 		thrityninescary.hide()
 		blandtscary.hide()
 		codiscary.show()
@@ -36,7 +33,7 @@ func _jumpscare():
 		get_tree().change_scene_to_file("res://YOUWON.tscn")
 	elif globals.blandt_jumpscare == true:
 		if !is_playing:
-			scream.play()
+			scream.play(0.2)
 		is_playing = true
 		print("blandtaiaiaiaiaiaiaiaaaiaii")
 		blandtscary.show()
@@ -47,11 +44,12 @@ func _jumpscare():
 	elif globals.petar_jumpscare == true:
 		if !is_playing:
 			scream.play()
+			await get_tree().create_timer(4.5).timeout
 		is_playing = true
 		
 		await get_tree().create_timer(8.0).timeout
 		get_tree().change_scene_to_file("res://YOUWON.tscn")
-		
+
 
 	
 
