@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://b7yxn4cogjrd" path="res://animatronics/blandt.tscn" id="6_ri6db"]
 [ext_resource type="Texture2D" uid="uid://cd2m58slop8y0" path="res://ui_elements/graphics/door_left.png" id="7_mfdlj"]
 [ext_resource type="Texture2D" uid="uid://cbjwwuq3txnh2" path="res://ui_elements/graphics/door_right.png" id="8_712jp"]
+[ext_resource type="Texture2D" uid="uid://qrhmynu222f3" path="res://resources/images/hallwayleft.jpg" id="11_p76y2"]
 [ext_resource type="AudioStream" uid="uid://c575k4u3i5ji0" path="res://resources/music/play_area.ogg" id="12_p76y2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4qxub"]
@@ -106,6 +107,9 @@ scale = Vector2(1.0483136, 0.78736323)
 visible = true
 position = Vector2(681.45917, 444)
 scale = Vector2(0.7670233, 0.5248829)
+
+[node name="hallway_left_image" parent="cams/hallway_left" parent_id_path=PackedInt32Array(1866859984, 686455424) index="0" unique_id=384055304]
+texture = ExtResource("11_p76y2")
 
 [node name="Soundtrack_Play_area" type="AudioStreamPlayer" parent="cams" unique_id=976819452]
 stream = ExtResource("12_p76y2")

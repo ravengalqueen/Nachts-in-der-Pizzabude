@@ -73,15 +73,4 @@ func _jumpscare():
 		globals.highdrough_jumpscare = false
 		await get_tree().create_timer(8.0).timeout
 		get_tree().change_scene_to_file("res://YOUWON.tscn")
- 	elif !is_playing:
-			scream.play()
-		is_playing = true
-
-
-		
-
-	
-
-
-func _on_audio_stream_player_finished() -> void:
-	is_playing = true
+ 	
