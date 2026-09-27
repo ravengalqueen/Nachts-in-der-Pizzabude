@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://dmdkw23144iwf" path="res://ui_elements/graphics/petar.png" id="10_d654q"]
 [ext_resource type="Texture2D" uid="uid://b3jsj34224w5x" path="res://ui_elements/graphics/codi_raw-removebg-preview.png" id="11_yfh2k"]
 [ext_resource type="Texture2D" uid="uid://pmvgfhev540x" path="res://ui_elements/graphics/highdrough.png" id="12_m11gb"]
+[ext_resource type="Texture2D" uid="uid://dus0js06i5ms0" path="res://resources/images/mainarea.jpg" id="12_wjbk4"]
 [ext_resource type="Texture2D" uid="uid://np3otl1sp1gl" path="res://ui_elements/graphics/storage.png" id="12_yfh2k"]
 [ext_resource type="PackedScene" uid="uid://t5jf4q36537w" path="res://minigames/recharge_lever.tscn" id="13_rukh5"]
 [ext_resource type="Texture2D" uid="uid://b77d2oxlsyji3" path="res://ui_elements/graphics/playroom_unfinished.png" id="14_3fd42"]
@@ -74,8 +75,8 @@ visible = false
 
 [node name="main_area_image" type="Sprite2D" parent="main_area" unique_id=1218684213]
 position = Vector2(576.5, 320.5)
-scale = Vector2(9.0390625, 5.0703125)
-texture = ExtResource("3_7ppic")
+scale = Vector2(0.75, 0.421)
+texture = ExtResource("12_wjbk4")
 
 [node name="CodiRaw" type="Sprite2D" parent="main_area" unique_id=694024715]
 visible = false
