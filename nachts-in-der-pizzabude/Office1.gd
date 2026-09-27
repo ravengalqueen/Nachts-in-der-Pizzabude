@@ -122,4 +122,3 @@ func _animatronic_in_door():
 	else:
 		h_office.hide()
 	
-
