@@ -49,15 +49,12 @@ func _on_mouse_entered():
 		if blandt == null:
 			return
 		blandt.make_invisible()
-	print("harhar")
 	
 
 func _loser():
 	if globals.codi_jumpscare == true:
-		print("codihoarhoarhoar")
 		get_tree().change_scene_to_file("res://JUMPSCARE.tscn")
 	elif globals.thritynine_jumpscare == true:
-		print("39rahhhhh")
 		get_tree().change_scene_to_file("res://JUMPSCARE.tscn")
 	elif globals.blandt_jumpscare == true:
 		print("blandtaiaiaiaiaiaiaiaaaiaii")
@@ -106,7 +103,6 @@ func _on_doorright_pressed() -> void:
 	elif globals.door_right_open == false:
 		globals.percent -= 0.005
 		globals.door_right_open = true
-		print("open up buttercup")
 		door_right.hide()
 
 
