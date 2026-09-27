@@ -19,7 +19,7 @@ func _jumpscare():
 		thrityninescary.hide()
 		blandtscary.hide()
 		codiscary.show()
-		
+		await get_tree().create_timer(8).timeout
 		globals.codi_jumpscare = false
 		get_tree().change_scene_to_file("res://YOUWON.tscn")
 	elif globals.thritynine_jumpscare == true:
