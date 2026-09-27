@@ -34,6 +34,7 @@ func _process(delta: float) -> void:
 func _on_mouse_entered():
 	if cams.visible:
 		cams.hide()
+		cams._mute_soundtracks()
 		globals.percent -= 0.005
 		doorleft.show()
 		doorright.show()
@@ -48,15 +49,12 @@ func _on_mouse_entered():
 		if blandt == null:
 			return
 		blandt.make_invisible()
-	print("harhar")
 	
 
 func _loser():
 	if globals.codi_jumpscare == true:
-		print("codihoarhoarhoar")
 		get_tree().change_scene_to_file("res://JUMPSCARE.tscn")
 	elif globals.thritynine_jumpscare == true:
-		print("39rahhhhh")
 		get_tree().change_scene_to_file("res://JUMPSCARE.tscn")
 	elif globals.blandt_jumpscare == true:
 		print("blandtaiaiaiaiaiaiaiaaaiaii")
@@ -78,7 +76,6 @@ func _Nighttimer():
 			if blandt == null:
 					return
 			blandt.spawn()
-			blandt.make_visible()
 		if globals.hours == 6:
 			globals.win = true
 			get_tree().change_scene_to_file("res://YOUWON.tscn")
@@ -106,7 +103,6 @@ func _on_doorright_pressed() -> void:
 	elif globals.door_right_open == false:
 		globals.percent -= 0.005
 		globals.door_right_open = true
-		print("open up buttercup")
 		door_right.hide()
 
 

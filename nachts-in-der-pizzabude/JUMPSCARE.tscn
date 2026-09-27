@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b3jsj34224w5x" path="res://ui_elements/graphics/codi_raw-removebg-preview.png" id="2_pmq77"]
 [ext_resource type="Texture2D" uid="uid://bysafawrsimb4" path="res://ui_elements/graphics/39 (2).png" id="3_v3xeu"]
 [ext_resource type="Texture2D" uid="uid://qdq3wgf2gcg3" path="res://resources/images/blandt_jumpscare.png" id="4_v3xeu"]
+[ext_resource type="AudioStream" uid="uid://cvov46ialpqro" path="res://resources/music/jumpscare.mp3" id="5_mpnak"]
 
 [node name="Node2D" type="Node2D" unique_id=182236669]
 
@@ -24,3 +25,7 @@ texture = ExtResource("3_v3xeu")
 position = Vector2(588, 454.00006)
 scale = Vector2(1.5637021, 1.7520324)
 texture = ExtResource("4_v3xeu")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1937923469]
+stream = ExtResource("5_mpnak")
+pitch_scale = 1.56
